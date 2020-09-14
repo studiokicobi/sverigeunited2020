@@ -21,3 +21,6 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+# ignore Mac .DS_Store files
+.DS_Store
