@@ -1,1 +1,1 @@
-jQuery((function(){}));
+!function(e,o,n){e((function(){e(".sub-menu").wrap('<div class="sub-menu-wrapper full-bleed">'),e(".search-icon").click((function(){e("body").toggleClass("no-scroll"),e(".search-box").slideToggle(),e(".main-content-fade").fadeToggle()})),e(document).on("keydown",(function(o){27===o.keyCode&&(e(".search-box").slideToggle(200),e(".main-content-fade").fadeToggle(200))})),e(document).ready((function(){e(".no-fouc").removeClass("no-fouc")}))}))}(jQuery);

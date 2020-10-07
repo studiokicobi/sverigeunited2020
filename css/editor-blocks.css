@@ -1,0 +1,13 @@
+/* Adjust the page title appearance. Page titles are only used in menus. */
+
+.editor-post-title__block {
+  color: #888;
+  border-bottom: 2px dotted #ddd;
+}
+
+.editor-post-title .editor-post-title__input {
+  font-size: 1.8rem;
+  background-color: #f7f7f7;
+  padding-left: 1rem;
+  font-weight: normal;
+}

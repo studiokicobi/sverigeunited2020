@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// Omslag block
+// -----------------------------------------------------------------------------
+
+.omslag-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@supports (width: min(20rem, 100%)) {
+  .omslag-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  }
+}
+
+.omslag {
+  position: relative;
+  border: 0.1rem solid transparent;
+
+  &__img-link {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+
+  @include on-event {
+    @include hover-shadow;
+  }
+
+  .omslag-content {
+    line-height: 1.4;
+    max-width: 12rem;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    padding: 0;
+
+    &__heading {
+      line-height: 1.65;
+      color: $text-color;
+      background-color: $brand;
+      display: inline;
+      padding: 0.2rem 0.4rem;
+      box-decoration-break: clone;
+    }
+  }
+}

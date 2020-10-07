@@ -1,0 +1,26 @@
+// Search results
+
+.search-result-grid {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+
+  @media screen and (max-width: $header-breakpoint-2) {
+    display: block;
+  }
+
+  &__header {
+    h1 {
+      font-size: 100%;
+
+      span {
+        color: $blue;
+      }
+    }
+  }
+
+  &__content {
+  }
+}

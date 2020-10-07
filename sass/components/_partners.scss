@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// Partners
+// -----------------------------------------------------------------------------
+
+.partners > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((1rem / 2) * -1);
+}
+
+.partners > * > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - (100% - 1rem)) * 999);
+  margin: calc(1rem / 2);
+  background-color: white;
+  border: 0.1rem solid white;
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
+
+  @include on-event {
+    @include hover-shadow;
+  }
+}
+
+.partners > * > :nth-last-child(n + 5),
+.partners > * > :nth-last-child(n + 5) ~ * {
+  flex-basis: 100%;
+}
+
+.partners {
+  margin: 3rem 0 2rem 0;
+
+  img {
+    max-height: 9rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}

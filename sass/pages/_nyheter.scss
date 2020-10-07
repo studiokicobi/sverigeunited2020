@@ -1,0 +1,113 @@
+// Nyheter
+
+.nyheter {
+  .hero-container {
+    margin-bottom: 0;
+  }
+
+  &__category-nav {
+    border-bottom: 0.15rem solid $blue-gray;
+    padding: 1rem 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline;
+        padding-right: 2rem;
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+          position: relative;
+
+          @include on-event {
+            color: $blue;
+
+            &::after {
+              // create an underline for current links
+              content: "";
+              width: 100%;
+              position: absolute;
+              bottom: -1.36rem;
+              left: 0;
+              border-bottom: 0.15rem solid $blue;
+            }
+          }
+
+          &.current {
+            color: $blue;
+            cursor: default;
+
+            &::after {
+              // create an underline for current links
+              content: "";
+              width: 100%;
+              position: absolute;
+              bottom: -1.36rem;
+              left: 0;
+              border-bottom: 0.15rem solid $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__yearly-nav {
+    margin: 1rem 0 0 0;
+    height: 100%;
+    display: inline-block;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: $header-breakpoint-2) {
+          display: inline;
+        }
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+          position: relative;
+
+          @include on-event {
+            color: $blue;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .nyheter-grid {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+
+    @media screen and (max-width: $header-breakpoint-2) {
+      display: block;
+    }
+
+    .grid-kort-wrapper {
+      margin-top: 1rem;
+    }
+
+    img {
+      margin-bottom: 1.5rem;
+    }
+
+    .date {
+      margin-bottom: 1rem;
+      display: block;
+    }
+  }
+}

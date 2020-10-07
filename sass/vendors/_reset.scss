@@ -65,11 +65,17 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+// body:not(.home) article > * + * {
+//   margin-top: 1em;
+// }
+
+/* p */
+p + p {
   margin-top: 1em;
 }
 
@@ -82,9 +88,9 @@ select {
 }
 
 /* Blur images when they have no alt attribute */
-img:not([alt]) {
-  filter: blur(10px);
-}
+// img:not([alt]) {
+//   filter: blur(10px);
+// }
 
 // Motion: okay
 @media (prefers-reduced-motion: no-preference) {

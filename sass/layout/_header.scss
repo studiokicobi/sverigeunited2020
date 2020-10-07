@@ -1,3 +1,461 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
+// Header
 // -----------------------------------------------------------------------------
+
+// Logo
+.logo {
+  &__link {
+    display: flex; // position the logo and text
+    align-items: center;
+    justify-content: flex-start;
+    color: $text-color;
+    font-family: $bold;
+    padding: 1rem;
+    margin-left: -1rem;
+    text-decoration: none;
+
+    @include on-event {
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: 3.5rem;
+    margin-right: 1.25rem; // make space for text beside logo
+  }
+
+  &__text {
+    white-space: nowrap;
+    font-size: 100%;
+  }
+}
+
+// ------------------------------------------------------------------------
+// Wide screen view for the header
+// ------------------------------------------------------------------------
+@media screen and (min-width: $header-breakpoint-2) {
+  .header-wrapper {
+    padding: 2rem 0;
+    background-color: white;
+    position: relative;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      // Main nav
+      .nav {
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-size: 100%;
+
+          li {
+            display: inline;
+
+            a {
+              display: inline-block;
+              color: $light-text;
+              font-family: $bold;
+              padding: 0.425rem 0;
+              margin: 0 0.75rem;
+              border-bottom: 0.175rem solid transparent;
+              text-decoration: none;
+
+              @include on-event {
+                text-decoration: none;
+                color: $text-color;
+              }
+            }
+          }
+
+          // Border under current menu item
+          li.current-menu-item a {
+            text-decoration: none;
+            border-bottom: 0.175rem solid $text-color;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Sub-menus
+  // ------------------------
+
+  // Hide sub-menus
+  .sub-menu-wrapper,
+  .sub-menu {
+    display: none;
+  }
+
+  body.page-parent,
+  body.page-child {
+    // Add space for the absolutely positioned sub-menu
+    .header-wrapper {
+      margin-bottom: 4rem;
+
+      // Show sub-menus when the parent list item is current
+      li.current-menu-item.menu-item-has-children,
+      li.current-menu-ancestor.menu-item-has-children {
+        .sub-menu-wrapper {
+          position: absolute;
+          left: 0;
+          bottom: -4rem; // Place below header-wrapper's padding
+          background-color: $blue;
+          display: block;
+
+          .sub-menu {
+            display: block;
+            max-width: $max-width;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: right;
+            padding: 1rem 2rem;
+
+            a {
+              color: $light-text-2;
+              border-bottom: 0.175rem solid transparent;
+              text-decoration: none;
+
+              @include on-event {
+                text-decoration: none;
+                color: white;
+              }
+            }
+
+            li.current-menu-item {
+              a {
+                text-decoration: none;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Search
+  // ------------------------
+
+  .search-icon {
+    padding-left: 1rem;
+  }
+}
+
+// ------------------------------------------------------------------------
+// End media query for widest screen
+//
+// Start media query for medium screens
+// ------------------------------------------------------------------------
+
+@media screen and (max-width: $header-breakpoint-1) {
+  .header-wrapper {
+    padding: 0.5rem 0;
+    background-color: white;
+    position: relative;
+
+    // Switch to a column with 2 rows at breakpoint
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      // Remove the margin on the first nav item to align it flush with other content
+      .nav ul li a:nth-child(1) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  body.page-parent
+    .header-wrapper
+    li.current-menu-item.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu,
+  body.page-parent
+    .header-wrapper
+    li.current-menu-ancestor.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu,
+  body.page-child
+    .header-wrapper
+    li.current-menu-item.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu,
+  body.page-child
+    .header-wrapper
+    li.current-menu-ancestor.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu {
+    text-align: left;
+  }
+}
+
+// ------------------------------------------------------------------------
+// End media query for medium screen
+//
+// Start media query for small screens
+// ------------------------------------------------------------------------
+
+@media screen and (max-width: $header-breakpoint-2) {
+  .header-wrapper {
+    padding: 0.5rem 0;
+    background-color: white;
+    position: relative;
+
+    // Switch to a column with 2 rows at breakpoint
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        align-self: flex-start;
+      }
+
+      .nav-toggle {
+        align-self: flex-end;
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-touch-callout: none;
+        user-select: none;
+        text-decoration: none;
+        text-indent: -999px;
+        overflow: hidden;
+        width: 2rem;
+        height: 100%;
+      }
+
+      .nav-toggle:before {
+        color: black;
+        font-size: 1.5rem;
+        text-transform: none;
+        content: "\2630";
+        text-indent: 0;
+        text-align: center;
+        line-height: 1;
+        speak: none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .nav-toggle.active::before {
+        font-size: 2rem;
+        line-height: 0.75;
+        content: "\00D7";
+      }
+      .nav {
+        text-align: right;
+        background-color: $bg;
+        margin-top: 0.5rem;
+        margin-bottom: -2rem;
+        padding: 2rem;
+        width: 100vw;
+
+        ul {
+          li {
+            a {
+              color: black;
+              font-family: $bold;
+              padding: 0.5rem 0;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  html.js .nav-collapse-0.opened {
+    max-height: 100% !important;
+  }
+
+  ul.sub-menu {
+    padding-right: 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0.5rem auto !important;
+    width: calc(100vw - 4rem) !important;
+
+    li {
+      a {
+        font-family: $regular !important;
+      }
+    }
+  }
+
+  body.page-parent
+    .header-wrapper
+    li.current-menu-item.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu,
+  body.page-parent
+    .header-wrapper
+    li.current-menu-ancestor.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu,
+  body.page-child
+    .header-wrapper
+    li.current-menu-item.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu,
+  body.page-child
+    .header-wrapper
+    li.current-menu-ancestor.menu-item-has-children
+    .sub-menu-wrapper
+    .sub-menu {
+    text-align: right;
+  }
+
+  // Hide content when nav is open
+  .js-nav-active .main-content,
+  .js-nav-active .footer {
+    display: none;
+  }
+}
+
+// ------------------------------------------------------------------------
+// End media query for small screens
+// ------------------------------------------------------------------------
+
+// Responsive nav
+// responsive-nav.js 1.0.39 by @viljamis
+// ------------------------
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-family: $regular;
+  font-size: 100%;
+  color: $light-text;
+
+  @include on-event {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media screen and (min-width: $header-breakpoint-2) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+    position: unset !important;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.header-wrapper {
+  .header {
+    .nav {
+      ul {
+        // 'Button' style for links, applied through Menu control panel in WP Dashboard
+        li.knapp {
+          z-index: 0;
+          position: relative;
+          margin: 0 0.5rem;
+
+          @media screen and (max-width: $header-breakpoint-2) {
+            margin: 0.5rem 0;
+            content: "";
+            clear: both;
+            display: table;
+            float: right;
+          }
+
+          a {
+            color: $text-color;
+            margin: 0 0.15rem;
+            padding: 0.075rem 0;
+            z-index: 1;
+            display: inline;
+
+            &::after {
+              content: "";
+              background-color: $brand;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              transform: skewX(-8deg);
+              transform-origin: 100%;
+              z-index: -1;
+              transition: all 200ms ease-in-out;
+            }
+
+            @include on-event {
+              color: white;
+              text-decoration: none;
+
+              &::after {
+                background-color: $text-color;
+              }
+            }
+          }
+        }
+
+        li.knapp.current-menu-item a {
+          border-bottom: 0.175rem solid transparent; // Border would clash with this button style
+        }
+      }
+    }
+  }
+}
+
+// File these!
+
+.search-icon {
+  display: none !important;
+}
+
+@media screen and (min-width: 48rem) {
+  .search-icon {
+    display: block !important;
+  }
+}

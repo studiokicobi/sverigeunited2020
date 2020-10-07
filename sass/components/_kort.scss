@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// Kort
+// -----------------------------------------------------------------------------
+
+// Simple blank card styles
+// ------------------------
+.enkel-kort {
+  padding: 2rem;
+  background-color: white;
+  border: 0.1rem solid white;
+  @include drop-shadow;
+}
+
+// Kort
+// ------------------------
+
+.grid-kort-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.search-results {
+  .grid-kort-wrapper {
+    padding-top: 0;
+  }
+}
+
+@supports (width: min(20rem, 100%)) {
+  .grid-kort-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  }
+}
+
+.grid-kort {
+  position: relative; // so we can link entire card
+  padding: 2rem;
+  background-color: white;
+  border: 0.1rem solid white;
+  margin-bottom: 0;
+  @include drop-shadow;
+
+  @include on-event {
+    @include hover-shadow;
+  }
+
+  h2 {
+    a {
+      color: $text-color;
+      text-decoration: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      @include on-event {
+        text-decoration: none;
+      }
+    }
+  }
+
+  h2.standard-anchor {
+    a {
+      color: $blue;
+      text-decoration: underline;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      @include on-event {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  a.knapp {
+    @include on-event {
+      color: $text-color !important;
+      text-decoration: none;
+
+      &::after {
+        background-color: $brand;
+      }
+    }
+  }
+}
+
+// Ensam kort
+// ------------------------
+.ensam-kort {
+  background-color: white;
+  @include drop-shadow;
+  max-width: 22rem;
+  padding: 2rem;
+  float: right;
+
+  @media screen and (max-width: 782px) {
+    max-width: 100%;
+    float: none;
+    margin-top: 3rem;
+    padding-top: 1rem;
+  }
+
+  &__heading {
+    font-size: 140%;
+  }
+
+  &__text {
+  }
+
+  &__knapp.knapp {
+    // Override som of the standard .knapp styles
+    display: block;
+    text-align: center;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin-top: 1rem;
+  }
+}

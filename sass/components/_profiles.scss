@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// Partners
+// -----------------------------------------------------------------------------
+
+.profil-wrapper {
+  .profil {
+    display: flex;
+    background-color: white;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    margin-bottom: 1rem;
+    @include drop-shadow;
+
+    &:nth-child(1) {
+      margin-top: 3rem;
+    }
+
+    .profil-image-wrapper {
+      margin-right: 1.5rem;
+      max-height: 8.6rem;
+
+      &__image {
+        max-width: 8.6rem;
+        max-height: 8.6rem;
+      }
+    }
+
+    .profil-text-content {
+      &__name {
+      }
+      &__role {
+        color: $light-text;
+        margin-bottom: 1rem;
+      }
+
+      &__description {
+        max-width: 52ch;
+        margin-bottom: 0;
+      }
+    }
+
+    .profil-email {
+      align-self: flex-end;
+      text-align: right;
+      flex-grow: 1;
+    }
+  }
+}

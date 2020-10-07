@@ -5,18 +5,23 @@
  *  Custom functions, support, custom post types and more.
  */
 
+/* Remove the WP Custom Fields meta box for faster admin load times
+	 https://www.advancedcustomfields.com/blog/acf-pro-5-5-13-update/
+   ------------------------------------------------------------------ */
+add_filter('acf/settings/remove_wp_meta_box', '__return_true');
+
 /*------------------------------------*\
 	External Modules/Files
 \*------------------------------------*/
 
-// Load any external files you have here
+// Load external files here
 
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
 
 if (!isset($content_width)) {
-    $content_width = 900;
+    $content_width = 1080;
 }
 
 if (function_exists('add_theme_support')) {
@@ -30,31 +35,12 @@ if (function_exists('add_theme_support')) {
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
-    // Add Support for Custom Backgrounds - Uncomment below if you're going to use
-    /*add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
-    ));*/
-
-    // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
-
     // Enables post and comment RSS feed links to head
-    add_theme_support('automatic-feed-links');
+    // add_theme_support('automatic-feed-links');
 
-    // Localisation Support
-    load_theme_textdomain('theme_base', get_template_directory() . '/languages');
 }
+
+
 
 /*------------------------------------*\
 	Functions
@@ -85,16 +71,29 @@ function theme_base_nav()
     );
 }
 
+// Add search icon to  nav
+function add_search_icon($items, $args)
+{
+    if ($args->theme_location == 'header-menu') {
+        $items .= '<li class="search-icon"><img class="open" alt="Search" src="' . get_template_directory_uri()  . '/img/search.svg"></li>';
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'add_search_icon', 10, 2);
+
 // Load Theme_Base scripts (header.php)
 function theme_base_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
+        // wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+        // wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+        // wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+        // wp_enqueue_script('modernizr'); // Enqueue it!
+
+        wp_register_script('responsive-nav', get_template_directory_uri() . '/js/lib/responsive-nav.min.js', array(), '1.0.0'); // Responsive Nav
+        wp_enqueue_script('responsive-nav'); // Enqueue it!
 
         wp_register_script('theme_basescripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('theme_basescripts'); // Enqueue it!
@@ -102,31 +101,36 @@ function theme_base_header_scripts()
 }
 
 // Load Theme_Base conditional scripts
-function theme_base_conditional_scripts()
-{
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
-    }
-}
+// function theme_base_conditional_scripts()
+// {
+//     if (is_page('pagenamehere')) {
+//         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
+//         wp_enqueue_script('scriptname'); // Enqueue it!
+//     }
+// }
 
 // Load Theme_Base styles
 function theme_base_styles()
 {
-    wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-    wp_enqueue_style('normalize'); // Enqueue it!
-
     wp_register_style('theme_base', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('theme_base'); // Enqueue it!
+}
+
+add_action('enqueue_block_editor_assets', 'add_block_editor_assets', 10, 0);
+function add_block_editor_assets()
+{
+    wp_enqueue_style('block_editor_css', get_template_directory_uri() . '/css/editor-blocks-min.css');
 }
 
 // Register Theme_Base Navigation
 function register_theme_base_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
-        'header-menu' => __('Header Menu', 'theme_base'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'theme_base'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'theme_base') // Extra Navigation if needed (duplicate as many as you need!)
+        'header-menu'   => __('Sidhuvud', 'theme_base'), // Main Navigation
+        'sidebar-menu'  => __('Sidebar', 'theme_base'), // Sidebar Navigation
+        'footer-menu'   => __('Sidfoten', 'theme_base'), // Footer Navigation
+        'social-menu'   => __('Social Media', 'theme_base'), // Social Navigation
+        'extra-menu'    => __('Extra', 'theme_base') // Extra Navigation if needed
     ));
 }
 
@@ -149,7 +153,7 @@ function remove_category_rel_from_category_list($thelist)
     return str_replace('rel="category tag"', 'rel="tag"', $thelist);
 }
 
-// Add page slug to body class, love this - Credit: Starkers Wordpress Theme
+// Add page slug to body class
 function add_slug_to_body_class($classes)
 {
     global $post;
@@ -165,6 +169,15 @@ function add_slug_to_body_class($classes)
     }
 
     return $classes;
+}
+
+// Remove meta boxes from page screen
+add_action('admin_menu', 'wpdocs_remove_page_fields');
+
+function wpdocs_remove_page_fields()
+{
+    remove_meta_box('commentstatusdiv', 'page', 'normal'); //removes comments status
+    remove_meta_box('commentsdiv', 'page', 'normal'); //removes comments
 }
 
 // If Dynamic Sidebar Exists
@@ -202,11 +215,11 @@ function my_remove_recent_comments_style()
     ));
 }
 
-// Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
+// Pagination for paged posts
 function theme_base_wp_pagination()
 {
     global $wp_query;
-    $big = 999999999;
+    $big = 10;
     echo paginate_links(array(
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
@@ -227,6 +240,12 @@ function theme_base_wp_custom_post($length)
     return 40;
 }
 
+// Create 55 Word Callback for Search result Excerpts
+function theme_base_search_result($length)
+{
+    return 55;
+}
+
 // Create the Custom Excerpts callback
 function theme_base_wp_excerpt($length_callback = '', $more_callback = '')
 {
@@ -244,17 +263,26 @@ function theme_base_wp_excerpt($length_callback = '', $more_callback = '')
     echo $output;
 }
 
+// Filter the excerpt "read more" string. Add link and replace default text.
+function theme_base_excerpt_more($more)
+{
+    if (!is_single()) {
+        $more = sprintf(
+            ' <a class="read-more" href="%1$s">%2$s</a>',
+            get_permalink(get_the_ID()),
+            __('Fortsätt läs…', 'textdomain')
+        );
+    }
+
+    return $more;
+}
+add_filter('excerpt_more', 'theme_base_excerpt_more');
+
 // Custom View Article link to Post
 function theme_base_blank_view_article($more)
 {
     global $post;
     return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'theme_base') . '</a>';
-}
-
-// Remove Admin bar
-function remove_admin_bar()
-{
-    return false;
 }
 
 // Remove 'text/css' from our enqueued stylesheet
@@ -271,66 +299,12 @@ function remove_thumbnail_dimensions($html)
 }
 
 // Custom Gravatar in Settings > Discussion
-function theme_base_gravatar($avatar_defaults)
-{
-    $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
-    $avatar_defaults[$myavatar] = "Custom Gravatar";
-    return $avatar_defaults;
-}
-
-// Threaded Comments
-function enable_threaded_comments()
-{
-    if (!is_admin()) {
-        if (is_singular() and comments_open() and (get_option('thread_comments') == 1)) {
-            wp_enqueue_script('comment-reply');
-        }
-    }
-}
-
-// Custom Comments Callback
-function theme_base_comments($comment, $args, $depth)
-{
-    $GLOBALS['comment'] = $comment;
-    extract($args, EXTR_SKIP);
-
-    if ('div' == $args['style']) {
-        $tag = 'div';
-        $add_below = 'comment';
-    } else {
-        $tag = 'li';
-        $add_below = 'div-comment';
-    }
-?>
-    <!-- heads up: starting < for the html tag (li or div) in the next line: -->
-    <<?php echo $tag ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-        <?php if ('div' != $args['style']) : ?>
-            <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-            <?php endif; ?>
-            <div class="comment-author vcard">
-                <?php if ($args['avatar_size'] != 0) echo get_avatar($comment, $args['180']); ?>
-                <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-            </div>
-            <?php if ($comment->comment_approved == '0') : ?>
-                <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-                <br />
-            <?php endif; ?>
-
-            <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
-                    <?php
-                    printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', '');
-                                                                                                ?>
-            </div>
-
-            <?php comment_text() ?>
-
-            <div class="reply">
-                <?php comment_reply_link(array_merge($args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-            </div>
-            <?php if ('div' != $args['style']) : ?>
-            </div>
-        <?php endif; ?>
-    <?php }
+// function theme_base_gravatar($avatar_defaults)
+// {
+//     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
+//     $avatar_defaults[$myavatar] = "Custom Gravatar";
+//     return $avatar_defaults;
+// }
 
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
@@ -338,8 +312,8 @@ function theme_base_comments($comment, $args, $depth)
 
 // Add Actions
 add_action('init', 'theme_base_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'theme_base_conditional_scripts'); // Add Conditional Page Scripts
-add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
+// add_action('wp_print_scripts', 'theme_base_conditional_scripts'); // Add Conditional Page Scripts
+// add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'theme_base_styles'); // Add Theme Stylesheet
 add_action('init', 'register_theme_base_menu'); // Add Theme_Base Menu
 // add_action('init', 'create_post_type_theme_base'); // Add our Theme_Base Custom Post Type
@@ -361,7 +335,7 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Add Filters
-add_filter('avatar_defaults', 'theme_base_gravatar'); // Custom Gravatar in Settings > Discussion
+// add_filter('avatar_defaults', 'theme_base_gravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
@@ -372,8 +346,8 @@ add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <di
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter('excerpt_more', 'theme_base_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
+// add_filter('excerpt_more', 'theme_base_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+// add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'theme_base_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
@@ -403,4 +377,261 @@ function theme_base_shortcode_demo_2($atts, $content = null) // Demo Heading H2 
     return '<h2>' . $content . '</h2>';
 }
 
-    ?>
+/*------------------------------------*\
+	Responsive video embeds
+\*------------------------------------*/
+add_theme_support('responsive-embeds');
+
+
+
+/*------------------------------------*\
+	Remove page title option
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+	Blocks
+\*------------------------------------*/
+
+if (
+    function_exists('acf_register_block_type')
+) :
+
+    acf_register_block_type(array(
+        'name' => 'ensam-kort',
+        'title' => 'Ensam kort (sidhuvud)',
+        'description' => '',
+        'category' => 'layout',
+        'keywords' => array(),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => '',
+        'align_content' => NULL,
+        'render_template' => 'blocks/ensam-kort.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'admin-post',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+    acf_register_block_type(array(
+        'name' => 'hero',
+        'title' => 'Hero',
+        'description' => '',
+        'category' => 'layout',
+        'keywords' => array(),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => '',
+        'align_content' => NULL,
+        'render_template' => 'blocks/hero.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'align-pull-right',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+    acf_register_block_type(array(
+        'name' => 'knapp',
+        'title' => 'Knapp',
+        'description' => '',
+        'category' => 'common',
+        'keywords' => array(),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => '',
+        'align_content' => NULL,
+        'render_template' => 'blocks/knapp.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'button',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+    acf_register_block_type(array(
+        'name' => 'kort',
+        'title' => 'Kort',
+        'description' => '',
+        'category' => 'layout',
+        'keywords' => array(
+            0 => 'Kort',
+            1 => 'Cards',
+        ),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => 'full',
+        'align_content' => NULL,
+        'render_template' => 'blocks/kort.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'columns',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+    acf_register_block_type(array(
+        'name' => 'omslag',
+        'title' => 'Omslag',
+        'description' => '',
+        'category' => 'layout',
+        'keywords' => array(),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => '',
+        'align_content' => NULL,
+        'render_template' => 'blocks/omslag.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'format-image',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+    acf_register_block_type(array(
+        'name' => 'partners',
+        'title' => 'Partners',
+        'description' => '',
+        'category' => 'layout',
+        'keywords' => array(
+            0 => 'partners',
+        ),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => '',
+        'align_content' => NULL,
+        'render_template' => 'blocks/partners.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'admin-users',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+    acf_register_block_type(array(
+        'name' => 'profil',
+        'title' => 'Profil',
+        'description' => '',
+        'category' => 'common',
+        'keywords' => array(),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => '',
+        'align_content' => NULL,
+        'render_template' => 'blocks/profil.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'id',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+    acf_register_block_type(array(
+        'name' => 'text-grupp',
+        'title' => 'Text Grupp',
+        'description' => '',
+        'category' => 'layout',
+        'keywords' => array(),
+        'post_types' => array(),
+        'mode' => 'auto',
+        'align' => '',
+        'align_content' => NULL,
+        'render_template' => 'blocks/text-grupp.php',
+        'render_callback' => '',
+        'enqueue_style' => '',
+        'enqueue_script' => '',
+        'enqueue_assets' => '',
+        'icon' => array(
+            'background' => '#fecb00',
+            'foreground' => '#000000',
+            'src' => 'text',
+        ),
+        'supports' => array(
+            'align' => true,
+            'mode' => true,
+            'multiple' => true,
+            '__experimental_jsx' => false,
+            'align_content' => false,
+        ),
+    ));
+
+endif;

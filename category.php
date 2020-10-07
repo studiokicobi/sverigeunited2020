@@ -1,19 +1,22 @@
-<?php get_header(); ?>
+<?php
 
-<main role="main">
-	<!-- section -->
+// Category
+
+get_header();
+
+// get the page ID in order to connect ACF fields
+$page = 23;
+// Yearly Archive shortcode
+// $years = do_shortcode('[SimpleYearlyArchive exclude="1,3,5"]');
+
+?>
+
+<main role="main" class="nyheter">
 	<section>
 
-		<h1>Categories for <?php single_cat_title(); ?></h1>
-
-		<?php get_template_part('loop'); ?>
-
-		<?php get_template_part('pagination'); ?>
+		<?php get_template_part('template-parts/nyheter'); ?>
 
 	</section>
-	<!-- /section -->
 </main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

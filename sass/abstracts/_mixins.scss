@@ -32,3 +32,13 @@
   }
 }
 
+// Drop shadow
+@mixin drop-shadow {
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
+}
+
+// Drop shadow, on-event style
+@mixin hover-shadow {
+  border: 0.1rem solid $blue;
+  box-shadow: 0px 5px 0px 0px rgba(0, 82, 147, 0.25);
+}

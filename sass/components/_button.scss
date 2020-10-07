@@ -1,3 +1,43 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+// 'Button' style
+p.knapp a,
+a.knapp {
+  font-family: $bold;
+  color: $text-color;
+  margin: 0 0.15rem;
+  padding: 0.075rem 0.1rem;
+  z-index: 1;
+  display: inline;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    background-color: $brand;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewX(-8deg);
+    transform-origin: 100%;
+    z-index: -1;
+    transition: all 200ms ease-in-out;
+  }
+
+  @include on-event {
+    color: white !important;
+    text-decoration: none;
+
+    &::after {
+      background-color: $text-color;
+    }
+  }
+}
+
+p.knapp {
+  margin-bottom: 3rem;
+}

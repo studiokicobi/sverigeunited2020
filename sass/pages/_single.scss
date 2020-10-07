@@ -1,0 +1,25 @@
+.single-content {
+  max-width: 46rem;
+  margin: auto;
+
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .date {
+    display: block;
+    text-align: center;
+    margin: 0 0 2rem 0;
+  }
+
+  iframe {
+    width: 100% !important;
+    max-width: 46rem;
+  }
+}

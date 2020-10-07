@@ -33,12 +33,68 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"/author.php": {
+	"/blocks/ensam-kort.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/author.php",
+		"oAP": "/blocks/ensam-kort.php",
+		"oF": 0
+		},
+	"/blocks/hero.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/hero.php",
+		"oF": 0
+		},
+	"/blocks/knapp.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/knapp.php",
+		"oF": 0
+		},
+	"/blocks/kort.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/kort.php",
+		"oF": 0
+		},
+	"/blocks/omslag.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/omslag.php",
+		"oF": 0
+		},
+	"/blocks/partners.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/partners.php",
+		"oF": 0
+		},
+	"/blocks/profil.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/profil.php",
+		"oF": 0
+		},
+	"/blocks/text-grupp.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/text-grupp.php",
 		"oF": 0
 		},
 	"/category.php": {
@@ -49,13 +105,25 @@
 		"oAP": "/category.php",
 		"oF": 0
 		},
-	"/comments.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
+	"/css/editor-blocks-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "/comments.php",
-		"oF": 0
+		"oAP": "/css/editor-blocks-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/editor-blocks.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/editor-blocks-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/fonts/index.html": {
 		"cB": 0,
@@ -65,12 +133,218 @@
 		"oAP": "/fonts/index.html",
 		"oF": 0
 		},
+	"/fonts/swedensans-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensans-webfont.eot",
+		"oF": 0
+		},
+	"/fonts/swedensans-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/fonts/swedensans-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/fonts/swedensans-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensans-webfont.ttf",
+		"oF": 0
+		},
+	"/fonts/swedensans-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensans-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/swedensans-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensans-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/SwedenSans_webfonts/generator_config.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSans_webfonts/generator_config.txt",
+		"oF": 0
+		},
+	"/fonts/SwedenSans_webfonts/specimen_files/easytabs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSans_webfonts/specimen_files/easytabs-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/fonts/SwedenSans_webfonts/specimen_files/grid_12-825-55-15.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSans_webfonts/specimen_files/grid_12-825-55-15-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/SwedenSans_webfonts/specimen_files/specimen_stylesheet.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSans_webfonts/specimen_files/specimen_stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/SwedenSans_webfonts/stylesheet.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSans_webfonts/stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/SwedenSans_webfonts/swedensans-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSans_webfonts/swedensans-demo.html",
+		"oF": 0
+		},
+	"/fonts/swedensansbold-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensansbold-webfont.eot",
+		"oF": 0
+		},
+	"/fonts/swedensansbold-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/fonts/swedensansbold-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/fonts/swedensansbold-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensansbold-webfont.ttf",
+		"oF": 0
+		},
+	"/fonts/swedensansbold-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensansbold-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/swedensansbold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/swedensansbold-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/SwedenSansBold_webfonts/generator_config.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSansBold_webfonts/generator_config.txt",
+		"oF": 0
+		},
+	"/fonts/SwedenSansBold_webfonts/specimen_files/easytabs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSansBold_webfonts/specimen_files/easytabs-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/fonts/SwedenSansBold_webfonts/specimen_files/grid_12-825-55-15.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSansBold_webfonts/specimen_files/grid_12-825-55-15-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/SwedenSansBold_webfonts/specimen_files/specimen_stylesheet.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSansBold_webfonts/specimen_files/specimen_stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/SwedenSansBold_webfonts/stylesheet.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSansBold_webfonts/stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/SwedenSansBold_webfonts/swedensansbold-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/SwedenSansBold_webfonts/swedensansbold-demo.html",
+		"oF": 0
+		},
 	"/footer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/footer.php",
+		"oF": 0
+		},
+	"/front-page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/front-page.php",
 		"oF": 0
 		},
 	"/functions.php": {
@@ -89,16 +363,34 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
-	"/img/gravatar.jpg": {
-		"ft": 16384,
-		"iS": 3482,
-		"jF": 0,
+	"/home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/img/gravatar.jpg",
+		"oAP": "/home.php",
+		"oF": 0
+		},
+	"/img/2000w/Artboard 1.png": {
+		"ft": 32768,
+		"iS": 146277,
+		"oA": 0,
+		"oAP": "/img/2000w/Artboard 1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
+		},
+	"/img/facebook.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/facebook.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/img/icons/favicon.ico": {
 		"cB": 0,
@@ -110,7 +402,7 @@
 		},
 	"/img/icons/touch.png": {
 		"ft": 32768,
-		"iS": 15472,
+		"iS": 6181,
 		"oA": 0,
 		"oAP": "/img/icons/touch.png",
 		"oF": 0,
@@ -119,22 +411,63 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/img/logo.png": {
+	"/img/instagram.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/instagram.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/search.png": {
 		"ft": 32768,
-		"iS": 4885,
+		"iS": 604,
 		"oA": 0,
-		"oAP": "/img/logo.png",
+		"oAP": "/img/search.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/img/logo.svg": {
+	"/img/search.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/img/logo.svg",
+		"oAP": "/img/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/sverige-united-logo.png": {
+		"ft": 32768,
+		"iS": 5224,
+		"oA": 0,
+		"oAP": "/img/sverige-united-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/sverige-united-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/sverige-united-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/twitter.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/twitter.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -170,6 +503,28 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/js/lib/responsive-nav.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/lib/responsive-nav-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/lib/responsive-nav.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/lib/responsive-nav.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/js/scripts-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -192,28 +547,12 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/loop.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/loop.php",
-		"oF": 0
-		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page.php",
-		"oF": 0
-		},
-	"/pagination.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/pagination.php",
 		"oF": 0
 		},
 	"/README.md": {
@@ -287,19 +626,6 @@
 		"oS": 0,
 		"sct": 0
 		},
-	"/sass/base/_fonts.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/_fonts.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
 	"/sass/base/_helpers.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -339,6 +665,97 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/sass/components/_hero.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_hero.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/components/_kort.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_kort.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/components/_omslag.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_omslag.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/components/_partners.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_partners.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/components/_profiles.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_profiles.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/components/_search.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_search.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/components/_text-grupp.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_text-grupp.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/sass/layout/_footer.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -348,6 +765,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_footer.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/layout/_fouc.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_fouc.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
@@ -374,6 +804,45 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_home.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/pages/_nyheter.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_nyheter.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/pages/_search-results.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_search-results.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/pages/_single.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_single.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
@@ -430,14 +899,38 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/sass/vendors/_responsive-nav.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_responsive-nav.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/sass/vendors/responsive-nav.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/sass/vendors/responsive-nav.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/screenshot.png": {
 		"ft": 32768,
 		"iS": 55117,
 		"oA": 0,
 		"oAP": "/screenshot.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -447,22 +940,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/search.php",
-		"oF": 0
-		},
-	"/searchform.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/searchform.php",
-		"oF": 0
-		},
-	"/sidebar.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/sidebar.php",
 		"oF": 0
 		},
 	"/single.php": {
@@ -491,20 +968,68 @@
 		"oAP": "/style.css.map",
 		"oF": 0
 		},
-	"/tag.php": {
+	"/template-parts/category-nav.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/tag.php",
+		"oAP": "/template-parts/category-nav.php",
 		"oF": 0
 		},
-	"/template-demo.php": {
+	"/template-parts/loop-master.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/template-demo.php",
+		"oAP": "/template-parts/loop-master.php",
+		"oF": 0
+		},
+	"/template-parts/loop.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/loop.php",
+		"oF": 0
+		},
+	"/template-parts/nyheter.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/nyheter.php",
+		"oF": 0
+		},
+	"/template-parts/pagination.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/pagination.php",
+		"oF": 0
+		},
+	"/template-parts/search-loop.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/search-loop.php",
+		"oF": 0
+		},
+	"/template-parts/searchform.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/searchform.php",
+		"oF": 0
+		},
+	"/template-parts/yearly-nav.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/yearly-nav.php",
 		"oF": 0
 		}
 	},

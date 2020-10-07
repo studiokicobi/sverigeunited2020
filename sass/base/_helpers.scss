@@ -2,12 +2,19 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 
+// Full bleed for breaking out of containers
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 /**
  * Clear inner floats
  */
 .clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -17,14 +24,14 @@
  * 2. Center it in the viewport
  * 3. Leave some space on the edges, especially valuable on small screens
  */
-.container {
+.wrapper {
   max-width: $max-width; /* 1 */
   margin-left: auto; /* 2 */
   margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
+  padding-left: 2rem; /* 3 */
+  padding-right: 2rem; /* 3 */
   width: 100%; /* 1 */
- }
+}
 
 /**
  * Hide text while making it readable for screen readers

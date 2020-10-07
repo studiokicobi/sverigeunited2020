@@ -1,0 +1,73 @@
+.hero-container {
+  margin-top: -3rem !important; // Override "body:not(.home) article > * + *" in reset.scss
+  margin-bottom: 5rem;
+
+  .hero-full-bleed {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .hero {
+      position: relative;
+
+      &__text {
+        max-width: 50%;
+
+        @media screen and (max-width: 781px) {
+          max-width: 100%;
+        }
+      }
+
+      &__kort {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media screen and (max-width: 1179px) {
+          right: 2rem;
+        }
+
+        @media screen and (max-width: 781px) {
+          position: relative;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .light {
+    // Light theme
+    background-color: $blue-gray;
+
+    .hero {
+      &__heading {
+        color: $text-color;
+      }
+
+      &__text {
+        color: $text-color;
+      }
+    }
+  }
+
+  .dark {
+    // Dark theme
+    background-color: $blue;
+
+    .hero {
+      &__heading {
+        color: $brand;
+      }
+
+      &__text {
+        color: white;
+      }
+    }
+  }
+}
+
+.search-results {
+  .hero-container {
+    margin-top: 0 !important; // Override "body:not(.home) article > * + *" in reset.scss
+    margin-bottom: 1rem;
+  }
+}

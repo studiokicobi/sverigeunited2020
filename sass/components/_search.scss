@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// Search
+// -----------------------------------------------------------------------------
+
+.header .search-icon {
+  cursor: pointer;
+  padding: 0.2rem 0.15rem 0.2rem 0.2rem;
+  margin-left: 0.3rem;
+
+  @include on-event {
+    transition: all 200ms linear;
+  }
+}
+
+.search-box {
+  display: none; // hide on load
+  background-color: $blue;
+
+  &__content {
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+
+    .search-img {
+    }
+
+    form.search {
+      width: 100%;
+      margin-right: 1rem;
+
+      input.search-input {
+        -webkit-appearance: none; // remove OS default styles
+        appearance: none; // remove OS default styles
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-family: $bold;
+        width: 100%;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+body.page-parent .search-box,
+body.page-child .search-box {
+  background-color: darken($blue, 4%);
+}
+
+input.search-input::placeholder,
+input.search-input::-webkit-input-placeholder,
+input.search-input::-moz-placeholder,
+input.search-input:-ms-input-placeholder,
+input.search-input:-moz-placeholder {
+  color: white;
+}
+
+.search-box ::-webkit-search-cancel-button {
+  display: none; // hide this because the color doesn't function with this design
+}
+
+.main-content {
+  position: relative;
+}
+
+// Overlay for the search box function
+.main-content-fade {
+  content: "";
+  opacity: 0.8 !important;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+
+// Prevent scrolling under the overlay
+.no-scroll {
+  // max-height: 100vh;
+  position: static !important;
+  overflow: hidden !important;
+}

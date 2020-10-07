@@ -2,42 +2,46 @@
 // Application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-// Fonts
+// Fonts: Sweden Sans, two weights
 // ------------------------
 
-// Regular font family
-$text-font-stack: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+// Regular
+$regular: "sweden_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// Code (monospace) font family
-$code-font-stack: "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco",
-  monospace !default;
+// Bold
+$bold: "sweden_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Colors
 // ------------------------
 
+// Bakgrundsfärg
+$bg: #edf2f7;
+
 // Copy text
-$text-color: rgb(34, 34, 34) !default;
+$text-color: #111111;
 
-// Main brand
-$brand-color: orangered !default;
+// Ljus text
+$light-text: #787878;
 
-// Light grey
-$light-grey: rgb(237, 237, 237) !default;
+// Brand color – yellow
+$brand: #fecb00;
 
-// Medium grey
-$mid-grey: rgb(153, 153, 153) !default;
+// Blå
+$blue: #005293;
 
-// Dark grey
-$dark-grey: rgb(68, 68, 68) !default;
+// Ljus text för Blå bakgrund
+$light-text-2: #b2c8dc;
+
+$blue-gray: #cdd4dc;
 
 // Dimensions
 // ------------------------
 
 // Container's maximum width
-$max-width: 1180px !default;
+$max-width: 1180px;
 
 // Line-height
-$ratio: 1.4;
+$ratio: 1.75;
 
 // Breakpoints map
 // @prop {String} keys - Keys are identifiers mapped to a given length
@@ -56,3 +60,10 @@ $ratio: 1.4;
 // @example scss - When using a CDN
 //   $base-url: 'http://cdn.example.com/assets/';
 // $base-url: "/assets/" !default;
+
+// Header breakpoints
+$header-breakpoint-1: 64em;
+$header-breakpoint-2: 55em;
+
+// Footer breakpoint
+$footer-breakpoint: 55em;

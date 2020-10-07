@@ -7,9 +7,15 @@
  */
 html {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: $bg;
+}
+
+main {
+  padding-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 /**
@@ -22,17 +28,96 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /**
  * Basic styles for links
  */
 a {
-  color: $brand-color;
-  text-decoration: none;
+  color: $blue;
+  text-decoration: underline;
 
   @include on-event {
     color: $text-color;
     text-decoration: underline;
+    transition: all 200ms ease-in-out;
   }
+}
+
+/**
+ * WordPress
+ */
+
+// Required
+.wp-caption {
+}
+.wp-caption-text {
+}
+.sticky {
+}
+.screen-reader-text {
+}
+.gallery-caption {
+}
+.bypostauthor {
+}
+.alignright {
+}
+.alignleft {
+}
+.aligncenter {
+}
+
+// Date
+.date {
+  color: $light-text;
+}
+
+// Hide Edit links
+.post-edit-link {
+  display: none;
+}
+
+// Make the multi-column block swap to a single column sooner than the default width.
+@media (max-width: 781px) {
+  .main-content {
+    div.wp-block-column {
+      flex-basis: 100% !important;
+    }
+  }
+}
+
+/* Add space between single images and descendent columns */
+.wp-block-image ~ .wp-block-columns {
+  margin-top: 3rem;
+}
+
+// Whitespace before columns
+@media (min-width: 782px) {
+  .wp-block-column:nth-child(n + 3) {
+    // Every column but the first 2
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 781px) {
+  .wp-block-column h2 {
+    margin-top: 1rem;
+  }
+
+  .wp-block-column:nth-child(2n) {
+    margin-left: 0 !important;
+  }
+}
+
+// Youtube embed
+.wp-block-embed-youtube {
+  margin-top: 1.5rem;
+}
+
+.wp-block-columns ~ .wp-block-columns {
+  margin-top: 3rem;
 }

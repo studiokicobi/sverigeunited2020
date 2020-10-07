@@ -1,0 +1,35 @@
+// Text grupp
+
+// 50-50 layout
+.text-grupp {
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@supports (width: min(375px, 100%)) {
+  .text-grupp {
+    grid-template-columns: repeat(auto-fit, minmax(min(375px, 100%), 1fr));
+  }
+}
+
+// 40-60 layout
+.storlek-40-60 {
+  .text-grupp__col-1 {
+    margin-right: 10%;
+  }
+  .text-grupp__col-2 {
+    margin-left: -10%;
+  }
+}
+
+// 30-70 layout
+.storlek-30-70 {
+  .text-grupp__col-1 {
+    margin-right: 20%;
+  }
+  .text-grupp__col-2 {
+    margin-left: -20%;
+  }
+}

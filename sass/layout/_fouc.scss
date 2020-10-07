@@ -1,0 +1,6 @@
+// FOUC fix. This rule ends the stylesheet.
+
+html {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
