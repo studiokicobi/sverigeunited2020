@@ -6,10 +6,39 @@
   @include drop-shadow;
   margin-bottom: 2rem;
 }
+
+// Facebook
 .facebook-wrapper {
+  #cff .cff-item {
+    border-bottom: none; // remove default style
+  }
+
+  .cff-date-dot {
+    display: none; // remove default style
+  }
+
+  #cff.cff-default-styles .cff-date {
+    // position the facebook date
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.8rem;
+    color: $light-text;
+  }
 }
+
+// Twitter
 .twitter-wrapper {
+  #ctf.ctf-styles .ctf-tweet-meta {
+    // position the tweet date
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.8rem;
+  }
 }
+
+//Instagram
 .instagram-wrapper {
   margin-top: 0 !important; // Override style in base.scss
 }
