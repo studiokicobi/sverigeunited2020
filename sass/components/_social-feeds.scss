@@ -1,6 +1,9 @@
 // Social feeds
 
 .social-feed {
+  background-color: white;
+  padding: 2rem;
+  @include drop-shadow;
 }
 .facebook-wrapper {
 }
