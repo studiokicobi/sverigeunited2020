@@ -25,6 +25,7 @@ $social-date-size: 0.8rem;
       background-repeat: no-repeat;
       background-position: center;
       background-size: 1.5rem;
+      display: block;
     }
   }
 }
@@ -49,7 +50,7 @@ $social-date-size: 0.8rem;
   }
 
   h3::before {
-    background-image: url("../img/facebook.svg");
+    background-image: url("img/facebook.svg");
   }
 }
 
@@ -70,7 +71,7 @@ $social-date-size: 0.8rem;
   }
 
   h3::before {
-    background-image: url("../img/twitter.svg");
+    background-image: url("img/twitter.svg");
   }
 }
 
@@ -79,6 +80,6 @@ $social-date-size: 0.8rem;
   margin-top: 0 !important; // Override style in base.scss
 
   h3::before {
-    background-image: url("../img/instagram.svg");
+    background-image: url("img/instagram.svg");
   }
 }

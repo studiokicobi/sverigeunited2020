@@ -1352,6 +1352,7 @@ input.search-input:-moz-placeholder {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.5rem;
+  display: block;
 }
 
 .facebook-wrapper #cff .cff-item {
@@ -1368,7 +1369,7 @@ input.search-input:-moz-placeholder {
   color: #787878;
 }
 .facebook-wrapper h3::before {
-  background-image: url("../img/facebook.svg");
+  background-image: url("img/facebook.svg");
 }
 
 .twitter-wrapper #ctf.ctf-styles .ctf-tweet-meta {
@@ -1382,14 +1383,14 @@ input.search-input:-moz-placeholder {
   color: #787878 !important;
 }
 .twitter-wrapper h3::before {
-  background-image: url("../img/twitter.svg");
+  background-image: url("img/twitter.svg");
 }
 
 .instagram-wrapper {
   margin-top: 0 !important;
 }
 .instagram-wrapper h3::before {
-  background-image: url("../img/instagram.svg");
+  background-image: url("img/instagram.svg");
 }
 
 .search-result-grid {
