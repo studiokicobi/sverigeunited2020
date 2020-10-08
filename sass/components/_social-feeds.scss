@@ -34,27 +34,25 @@ $social-date-size: 0.8rem;
 
 // Facebook
 .facebook-wrapper {
-  #cff {
-    p {
-      margin: auto !important; // Override default
-    }
+  #cff p {
+    margin: auto !important; // Override default
+  }
 
-    .cff-item {
-      border-bottom: none; // remove default style
-    }
+  #cff .cff-item {
+    border-bottom: none; // remove default style
+  }
 
-    .cff-date-dot {
-      display: none; // remove default style
-    }
+  .cff-date-dot {
+    display: none; // remove default style
+  }
 
-    .cff-default-styles .cff-date {
-      // position the facebook date
-      position: absolute;
-      bottom: $social-padding;
-      right: $social-padding;
-      font-size: $social-date-size;
-      color: $light-text;
-    }
+  #cff.cff-default-styles .cff-date {
+    // position the facebook date
+    position: absolute;
+    bottom: $social-padding;
+    right: $social-padding;
+    font-size: $social-date-size;
+    color: $light-text;
   }
 
   h3::before {
@@ -64,37 +62,35 @@ $social-date-size: 0.8rem;
 
 // Twitter
 .twitter-wrapper {
-  #ctf {
-    .ctf-styles .ctf-tweet-meta {
-      // position the tweet date
-      position: absolute;
-      bottom: $social-padding;
-      right: $social-padding;
-      font-size: $social-date-size;
+  #ctf.ctf-styles .ctf-tweet-meta {
+    // position the tweet date
+    position: absolute;
+    bottom: $social-padding;
+    right: $social-padding;
+    font-size: $social-date-size;
 
-      a {
-        // Restyle the anchor
-        text-decoration: none;
-        color: $light-text !important; // override default
-      }
-    }
-
-    .ctf-item {
-      padding: 0 !important; // Override default
-    }
-
-    .ctf-narrow .ctf-tweet-content {
-      padding: 0 !important; // Override default
-    }
-
-    .ctf-super-narrow .ctf-author-box {
-      min-height: 0 !important; // Override default
-      margin-bottom: 0 !important; // Override default
+    a {
+      // Restyle the anchor
+      text-decoration: none;
+      color: $light-text !important; // override default
     }
   }
 
   h3::before {
     background-image: url("img/twitter.svg");
+  }
+
+  #ctf .ctf-item {
+    padding: 0 !important; // Override default
+  }
+
+  #ctf.ctf-narrow .ctf-tweet-content {
+    padding: 0 !important; // Override default
+  }
+
+  #ctf.ctf-super-narrow .ctf-author-box {
+    min-height: 0 !important; // Override default
+    margin-bottom: 0 !important; // Override default
   }
 }
 
