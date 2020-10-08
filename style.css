@@ -1347,16 +1347,16 @@ input.search-input:-moz-placeholder {
 }
 .facebook-wrapper #cff.cff-default-styles .cff-date {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 1rem;
+  right: 1rem;
   font-size: 0.8rem;
   color: #787878;
 }
 
 .twitter-wrapper #ctf.ctf-styles .ctf-tweet-meta {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 1rem;
+  right: 1rem;
   font-size: 0.8rem;
 }
 .twitter-wrapper #ctf.ctf-styles .ctf-tweet-meta a {

@@ -1,5 +1,9 @@
 // Social feeds
 
+// Variables
+$social-padding: 1rem;
+$social-date-size: 0.8rem;
+
 .social-feed {
   background-color: white;
   padding: 2rem;
@@ -21,9 +25,9 @@
   #cff.cff-default-styles .cff-date {
     // position the facebook date
     position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    font-size: 0.8rem;
+    bottom: $social-padding;
+    right: $social-padding;
+    font-size: $social-date-size;
     color: $light-text;
   }
 }
@@ -33,9 +37,9 @@
   #ctf.ctf-styles .ctf-tweet-meta {
     // position the tweet date
     position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    font-size: 0.8rem;
+    bottom: $social-padding;
+    right: $social-padding;
+    font-size: $social-date-size;
 
     a {
       // Restyle the anchor
