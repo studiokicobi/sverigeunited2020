@@ -10,5 +10,5 @@
 .twitter-wrapper {
 }
 .instagram-wrapper {
-  margin-top: 0;
+  margin-top: 0 !important; // Override style in base.scss
 }

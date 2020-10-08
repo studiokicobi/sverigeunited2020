@@ -1338,7 +1338,7 @@ input.search-input:-moz-placeholder {
 }
 
 .instagram-wrapper {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .search-result-grid {
