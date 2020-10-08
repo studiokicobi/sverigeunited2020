@@ -414,7 +414,7 @@ h2 {
 @media screen and (min-width: 55em) {
   .header-wrapper {
     padding: 2rem 0;
-    background-color: #fff;
+    background-color: white;
     position: relative;
   }
   .header-wrapper .header {
@@ -1161,6 +1161,7 @@ input.search-input:-moz-placeholder {
 }
 .partners img {
   max-height: 9rem;
+  width: auto;
   text-align: center;
   margin: 0 auto;
   padding: 1rem;
@@ -1328,6 +1329,10 @@ input.search-input:-moz-placeholder {
 }
 .storlek-30-70 .text-grupp__col-2 {
   margin-left: -20%;
+}
+
+.instagram-wrapper {
+  margin-top: 0;
 }
 
 .search-result-grid {
