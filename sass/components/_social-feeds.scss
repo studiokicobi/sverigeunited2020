@@ -14,6 +14,18 @@ $social-date-size: 0.8rem;
   h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1.5rem;
+    }
   }
 }
 
@@ -35,6 +47,10 @@ $social-date-size: 0.8rem;
     font-size: $social-date-size;
     color: $light-text;
   }
+
+  h3::before {
+    background-image: url("img/facebook.svg");
+  }
 }
 
 // Twitter
@@ -52,9 +68,17 @@ $social-date-size: 0.8rem;
       color: $light-text !important; // override default
     }
   }
+
+  h3::before {
+    background-image: url("img/twitter.svg");
+  }
 }
 
 //Instagram
 .instagram-wrapper {
   margin-top: 0 !important; // Override style in base.scss
+
+  h3::before {
+    background-image: url("img/instagram.svg");
+  }
 }

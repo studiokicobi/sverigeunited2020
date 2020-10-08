@@ -1341,6 +1341,17 @@ input.search-input:-moz-placeholder {
 .social-feed h3 {
   font-size: 1rem;
   margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.social-feed h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5rem;
 }
 
 .facebook-wrapper #cff .cff-item {
@@ -1356,6 +1367,9 @@ input.search-input:-moz-placeholder {
   font-size: 0.8rem;
   color: #787878;
 }
+.facebook-wrapper h3::before {
+  background-image: url("img/facebook.svg");
+}
 
 .twitter-wrapper #ctf.ctf-styles .ctf-tweet-meta {
   position: absolute;
@@ -1367,9 +1381,15 @@ input.search-input:-moz-placeholder {
   text-decoration: none;
   color: #787878 !important;
 }
+.twitter-wrapper h3::before {
+  background-image: url("img/twitter.svg");
+}
 
 .instagram-wrapper {
   margin-top: 0 !important;
+}
+.instagram-wrapper h3::before {
+  background-image: url("img/instagram.svg");
 }
 
 .search-result-grid {
