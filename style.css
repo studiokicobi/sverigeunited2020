@@ -1338,6 +1338,10 @@ input.search-input:-moz-placeholder {
   margin-bottom: 2rem;
   position: relative;
 }
+.social-feed h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
 
 .facebook-wrapper #cff .cff-item {
   border-bottom: none;
@@ -1361,7 +1365,7 @@ input.search-input:-moz-placeholder {
 }
 .twitter-wrapper #ctf.ctf-styles .ctf-tweet-meta a {
   text-decoration: none;
-  color: #787878;
+  color: #787878 !important;
 }
 
 .instagram-wrapper {

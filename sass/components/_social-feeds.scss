@@ -10,6 +10,11 @@ $social-date-size: 0.8rem;
   @include drop-shadow;
   margin-bottom: 2rem;
   position: relative;
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 // Facebook
@@ -44,7 +49,7 @@ $social-date-size: 0.8rem;
     a {
       // Restyle the anchor
       text-decoration: none;
-      color: $light-text;
+      color: $light-text !important; // override default
     }
   }
 }
