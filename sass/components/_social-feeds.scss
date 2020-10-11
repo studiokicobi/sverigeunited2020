@@ -78,7 +78,7 @@ $social-date-size: 0.8rem;
 
 // Twitter
 .twitter-feed {
-  .twitter-feed #ctf .ctf-item {
+  #ctf .ctf-item {
     position: absolute;
     min-height: 100%;
     bottom: 1rem;
@@ -86,7 +86,7 @@ $social-date-size: 0.8rem;
     padding-top: 0.5rem;
   }
 
-  .twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
+  #ctf .ctf-author-box {
     min-height: 0 !important;
     margin-bottom: 0 !important;
     position: absolute;

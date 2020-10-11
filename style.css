@@ -1384,14 +1384,14 @@ input.search-input:-moz-placeholder {
   background-image: url("img/facebook.svg");
 }
 
-.twitter-feed .twitter-feed #ctf .ctf-item {
+.twitter-feed #ctf .ctf-item {
   position: absolute;
   min-height: 100%;
   bottom: 1rem;
   right: 0;
   padding-top: 0.5rem;
 }
-.twitter-feed .twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
+.twitter-feed #ctf .ctf-author-box {
   min-height: 0 !important;
   margin-bottom: 0 !important;
   position: absolute;
