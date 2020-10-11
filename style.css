@@ -1345,6 +1345,7 @@ input.search-input:-moz-placeholder {
   }
 }
 .social-kort {
+  position: relative;
   padding: 2rem;
   background-color: white;
   margin-bottom: 0;
@@ -1369,10 +1370,23 @@ input.search-input:-moz-placeholder {
   display: block;
 }
 
+.facebook-feed #cff.cff-default-styles .cff-date {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  color: #787878;
+}
 .facebook-feed h3::before {
   background-image: url("img/facebook.svg");
 }
 
+.twitter-feed #ctf.ctf-styles .ctf-tweet-meta {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+}
 .twitter-feed h3::before {
   background-image: url("img/twitter.svg");
 }

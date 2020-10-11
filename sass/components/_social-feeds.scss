@@ -21,6 +21,7 @@ $social-date-size: 0.8rem;
 }
 
 .social-kort {
+  position: relative;
   padding: 2rem;
   background-color: white;
   margin-bottom: 0;
@@ -59,11 +60,11 @@ $social-date-size: 0.8rem;
 
   #cff.cff-default-styles .cff-date {
     // position the facebook date
-    // position: absolute;
-    // bottom: $social-padding;
-    // right: $social-padding;
-    // font-size: $social-date-size;
-    // color: $light-text;
+    position: absolute;
+    bottom: $social-padding;
+    right: $social-padding;
+    font-size: $social-date-size;
+    color: $light-text;
   }
 
   h3::before {
@@ -75,10 +76,10 @@ $social-date-size: 0.8rem;
 .twitter-feed {
   #ctf.ctf-styles .ctf-tweet-meta {
     // position the tweet date
-    // position: absolute;
-    // bottom: $social-padding;
-    // right: $social-padding;
-    // font-size: $social-date-size;
+    position: absolute;
+    bottom: $social-padding;
+    right: $social-padding;
+    font-size: $social-date-size;
 
     a {
       // Restyle the anchor
