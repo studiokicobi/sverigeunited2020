@@ -4,14 +4,27 @@
 $social-padding: 1rem;
 $social-date-size: 0.8rem;
 
-.facebook-wrapper,
-.twitter-wrapper,
-.instagram-wrapper {
-  background-color: white;
+// Social kort
+// ------------------------
+
+.social-kort-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@supports (width: min(20rem, 100%)) {
+  .social-kort-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  }
+}
+
+.social-kort {
   padding: 2rem;
+  background-color: white;
+  margin-bottom: 0;
   @include drop-shadow;
-  margin-bottom: 2rem;
-  position: relative;
 
   h3 {
     font-size: 1rem;
@@ -35,13 +48,9 @@ $social-date-size: 0.8rem;
 }
 
 // Facebook
-.facebook-wrapper {
+.facebook-feed {
   #cff p {
     margin: auto !important; // Override default
-  }
-
-  #cff .cff-item {
-    border-bottom: none; // remove default style
   }
 
   .cff-date-dot {
@@ -63,7 +72,7 @@ $social-date-size: 0.8rem;
 }
 
 // Twitter
-.twitter-wrapper {
+.twitter-feed {
   #ctf.ctf-styles .ctf-tweet-meta {
     // position the tweet date
     position: absolute;
@@ -97,7 +106,7 @@ $social-date-size: 0.8rem;
 }
 
 //Instagram
-.instagram-wrapper {
+.instagram-feed {
   margin-top: 0 !important; // Override style in base.scss
 
   h3::before {

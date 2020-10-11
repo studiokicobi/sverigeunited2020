@@ -1332,26 +1332,31 @@ input.search-input:-moz-placeholder {
   margin-left: -20%;
 }
 
-.facebook-wrapper,
-.twitter-wrapper,
-.instagram-wrapper {
-  background-color: white;
-  padding: 2rem;
-  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
-  margin-bottom: 2rem;
-  position: relative;
+.social-kort-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-.facebook-wrapper h3,
-.twitter-wrapper h3,
-.instagram-wrapper h3 {
+
+@supports (width: min(20rem, 100%)) {
+  .social-kort-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  }
+}
+.social-kort {
+  padding: 2rem;
+  background-color: white;
+  margin-bottom: 0;
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
+}
+.social-kort h3 {
   font-size: 1rem;
   margin-bottom: 1rem;
   position: relative;
   padding-left: 1.8rem;
 }
-.facebook-wrapper h3::before,
-.twitter-wrapper h3::before,
-.instagram-wrapper h3::before {
+.social-kort h3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1364,54 +1369,51 @@ input.search-input:-moz-placeholder {
   display: block;
 }
 
-.facebook-wrapper #cff p {
+.facebook-feed #cff p {
   margin: auto !important;
 }
-.facebook-wrapper #cff .cff-item {
-  border-bottom: none;
-}
-.facebook-wrapper .cff-date-dot {
+.facebook-feed .cff-date-dot {
   display: none;
 }
-.facebook-wrapper #cff.cff-default-styles .cff-date {
+.facebook-feed #cff.cff-default-styles .cff-date {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   font-size: 0.8rem;
   color: #787878;
 }
-.facebook-wrapper h3::before {
+.facebook-feed h3::before {
   background-image: url("img/facebook.svg");
 }
 
-.twitter-wrapper #ctf.ctf-styles .ctf-tweet-meta {
+.twitter-feed #ctf.ctf-styles .ctf-tweet-meta {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   font-size: 0.8rem;
 }
-.twitter-wrapper #ctf.ctf-styles .ctf-tweet-meta a {
+.twitter-feed #ctf.ctf-styles .ctf-tweet-meta a {
   text-decoration: none;
   color: #787878 !important;
 }
-.twitter-wrapper h3::before {
+.twitter-feed h3::before {
   background-image: url("img/twitter.svg");
 }
-.twitter-wrapper #ctf .ctf-item {
+.twitter-feed #ctf .ctf-item {
   padding: 0 !important;
 }
-.twitter-wrapper #ctf.ctf-narrow .ctf-tweet-content {
+.twitter-feed #ctf.ctf-narrow .ctf-tweet-content {
   padding: 0 !important;
 }
-.twitter-wrapper #ctf.ctf-super-narrow .ctf-author-box {
+.twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
   min-height: 0 !important;
   margin-bottom: 0 !important;
 }
 
-.instagram-wrapper {
+.instagram-feed {
   margin-top: 0 !important;
 }
-.instagram-wrapper h3::before {
+.instagram-feed h3::before {
   background-image: url("img/instagram.svg");
 }
 
