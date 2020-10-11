@@ -75,7 +75,8 @@ picture {
 // }
 
 /* p */
-p + p {
+p + p,
+p + figure {
   margin-top: 1em;
 }
 
