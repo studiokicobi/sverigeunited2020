@@ -1345,7 +1345,6 @@ input.search-input:-moz-placeholder {
   }
 }
 .social-kort {
-  position: relative;
   padding: 2rem;
   background-color: white;
   margin-bottom: 0;
@@ -1369,15 +1368,15 @@ input.search-input:-moz-placeholder {
   width: 1.3rem;
   display: block;
 }
-
-.facebook-feed #cff .cff-date {
+.social-kort #cff .cff-date {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 0;
+  right: 0;
   font-size: 0.8rem;
   color: #787878;
   width: auto;
 }
+
 .facebook-feed h3::before {
   background-image: url("img/facebook.svg");
 }

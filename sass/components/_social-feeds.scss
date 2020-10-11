@@ -21,7 +21,6 @@ $social-date-size: 0.8rem;
 }
 
 .social-kort {
-  position: relative;
   padding: 2rem;
   background-color: white;
   margin-bottom: 0;
@@ -46,6 +45,16 @@ $social-date-size: 0.8rem;
       display: block;
     }
   }
+
+  #cff .cff-date {
+    // position the facebook date
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: $social-date-size;
+    color: $light-text;
+    width: auto;
+  }
 }
 
 // Facebook
@@ -56,16 +65,6 @@ $social-date-size: 0.8rem;
 
   .cff-date-dot {
     // display: none; // remove default style
-  }
-
-  #cff .cff-date {
-    // position the facebook date
-    position: absolute;
-    bottom: $social-padding;
-    right: $social-padding;
-    font-size: $social-date-size;
-    color: $light-text;
-    width: auto;
   }
 
   h3::before {
