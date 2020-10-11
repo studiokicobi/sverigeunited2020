@@ -42,8 +42,8 @@ if (!empty($block['align'])) {
                 <div class="<?php the_sub_field('kontotyp'); ?>-feed">
                     <h3><?php the_sub_field('rubrik'); ?></h3>
                     <?php
-                    $shortcode = the_sub_field('kortkod');
-                    echo do_shortcode('$shortcode');
+                    // $shortcode = the_sub_field('kortkod');
+                    // echo do_shortcode('$shortcode');
                     ?>
                 </div>
 
