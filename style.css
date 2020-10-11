@@ -1371,8 +1371,7 @@ input.search-input:-moz-placeholder {
 .social-kort #cff .cff-item {
   position: relative;
 }
-.social-kort #cff .cff-date,
-.social-kort .ctf-tweet-meta {
+.social-kort #cff .cff-date {
   position: absolute;
   bottom: -1rem;
   right: 0;

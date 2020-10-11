@@ -50,8 +50,7 @@ $social-date-size: 0.8rem;
     position: relative; // so we can position the date
   }
 
-  #cff .cff-date,
-  .ctf-tweet-meta {
+  #cff .cff-date {
     // position the date
     position: absolute;
     bottom: -1rem;
