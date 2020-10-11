@@ -35,13 +35,23 @@ if (!empty($block['align'])) {
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
     <?php if (have_rows('social_konto')) : ?>
-        <?php while (have_rows('social_konto')) : the_row(); ?>
-            <?php the_sub_field('kontotyp'); ?>
-            <?php the_sub_field('rubrik'); ?>
-            <?php the_sub_field('kortkod'); ?>
-        <?php endwhile; ?>
-    <?php else : ?>
-        <?php // no rows found 
-        ?>
+
+        <div class="social-kort-wrapper">
+            <?php while (have_rows('social_konto')) : the_row(); ?>
+
+                <div class="<?php the_sub_field('kontotyp'); ?>-feed">
+                    <h3><?php the_sub_field('rubrik'); ?></h3>
+                    <?php 
+                    echo do_shortcode( 'the_sub_field('kortkod')' );
+                    ?>
+                </div>
+
+            <?php endwhile; ?>
+        <?php else : ?>
+            <?php // no rows found 
+            ?>
+
+        </div>
+
     <?php endif; ?>
 </div>
