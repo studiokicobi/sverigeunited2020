@@ -1332,20 +1332,26 @@ input.search-input:-moz-placeholder {
   margin-left: -20%;
 }
 
-.social-feed {
+.facebook-wrapper,
+.twitter-wrapper,
+.instagram-wrapper {
   background-color: white;
   padding: 2rem;
   box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
   margin-bottom: 2rem;
   position: relative;
 }
-.social-feed h3 {
+.facebook-wrapper h3,
+.twitter-wrapper h3,
+.instagram-wrapper h3 {
   font-size: 1rem;
   margin-bottom: 1rem;
   position: relative;
   padding-left: 1.8rem;
 }
-.social-feed h3::before {
+.facebook-wrapper h3::before,
+.twitter-wrapper h3::before,
+.instagram-wrapper h3::before {
   content: "";
   position: absolute;
   top: 0;
