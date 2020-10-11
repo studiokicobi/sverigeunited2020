@@ -78,6 +78,10 @@ $social-date-size: 0.8rem;
 
 // Twitter
 .twitter-feed {
+  #ctf {
+    min-height: 100%;
+  }
+
   .ctf-item {
     position: absolute;
     min-height: 100%;
@@ -113,17 +117,16 @@ $social-date-size: 0.8rem;
   }
 
   #ctf .ctf-item {
-    padding: 0 !important; // Override default
-    position: relative;
+    // padding: 0 !important; // Override default
+    // position: relative;
   }
 
   #ctf.ctf-narrow .ctf-tweet-content {
-    padding: 0 !important; // Override default
+    // padding: 0 !important; // Override default
   }
 
   #ctf.ctf-super-narrow .ctf-author-box {
-    min-height: 0 !important; // Override default
-    margin-bottom: 0 !important; // Override default
+    // margin-bottom: 0 !important; // Override default
   }
 }
 
