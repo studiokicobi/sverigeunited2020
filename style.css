@@ -1394,6 +1394,13 @@ input.search-input:-moz-placeholder {
   right: 0;
   padding-top: 0.5rem;
 }
+.twitter-feed .ctf-tweet-items {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .twitter-feed .ctf-author-box {
   min-height: 0 !important;
   margin-bottom: 0 !important;

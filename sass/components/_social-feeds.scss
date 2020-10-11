@@ -90,6 +90,14 @@ $social-date-size: 0.8rem;
     padding-top: 0.5rem;
   }
 
+  .ctf-tweet-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
   .ctf-author-box {
     min-height: 0 !important;
     margin-bottom: 0 !important;
