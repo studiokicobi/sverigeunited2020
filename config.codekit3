@@ -89,6 +89,14 @@
 		"oAP": "/blocks/profil.php",
 		"oF": 0
 		},
+	"/blocks/social.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/blocks/social.php",
+		"oF": 0
+		},
 	"/blocks/text-grupp.php": {
 		"cB": 0,
 		"ft": 8192,
