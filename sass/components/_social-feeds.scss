@@ -50,20 +50,20 @@ $social-date-size: 0.8rem;
 // Facebook
 .facebook-feed {
   #cff p {
-    margin: auto !important; // Override default
+    // margin: auto !important; // Override default
   }
 
   .cff-date-dot {
-    display: none; // remove default style
+    // display: none; // remove default style
   }
 
   #cff.cff-default-styles .cff-date {
     // position the facebook date
-    position: absolute;
-    bottom: $social-padding;
-    right: $social-padding;
-    font-size: $social-date-size;
-    color: $light-text;
+    // position: absolute;
+    // bottom: $social-padding;
+    // right: $social-padding;
+    // font-size: $social-date-size;
+    // color: $light-text;
   }
 
   h3::before {
@@ -75,15 +75,15 @@ $social-date-size: 0.8rem;
 .twitter-feed {
   #ctf.ctf-styles .ctf-tweet-meta {
     // position the tweet date
-    position: absolute;
-    bottom: $social-padding;
-    right: $social-padding;
-    font-size: $social-date-size;
+    // position: absolute;
+    // bottom: $social-padding;
+    // right: $social-padding;
+    // font-size: $social-date-size;
 
     a {
       // Restyle the anchor
-      text-decoration: none;
-      color: $light-text !important; // override default
+      // text-decoration: none;
+      // color: $light-text !important; // override default
     }
   }
 
@@ -92,22 +92,22 @@ $social-date-size: 0.8rem;
   }
 
   #ctf .ctf-item {
-    padding: 0 !important; // Override default
+    // padding: 0 !important; // Override default
   }
 
   #ctf.ctf-narrow .ctf-tweet-content {
-    padding: 0 !important; // Override default
+    // padding: 0 !important; // Override default
   }
 
   #ctf.ctf-super-narrow .ctf-author-box {
-    min-height: 0 !important; // Override default
-    margin-bottom: 0 !important; // Override default
+    // min-height: 0 !important; // Override default
+    // margin-bottom: 0 !important; // Override default
   }
 }
 
 //Instagram
 .instagram-feed {
-  margin-top: 0 !important; // Override style in base.scss
+  // margin-top: 0 !important; // Override style in base.scss
 
   h3::before {
     background-image: url("img/instagram.svg");

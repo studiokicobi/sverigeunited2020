@@ -1369,49 +1369,12 @@ input.search-input:-moz-placeholder {
   display: block;
 }
 
-.facebook-feed #cff p {
-  margin: auto !important;
-}
-.facebook-feed .cff-date-dot {
-  display: none;
-}
-.facebook-feed #cff.cff-default-styles .cff-date {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.8rem;
-  color: #787878;
-}
 .facebook-feed h3::before {
   background-image: url("img/facebook.svg");
 }
 
-.twitter-feed #ctf.ctf-styles .ctf-tweet-meta {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.8rem;
-}
-.twitter-feed #ctf.ctf-styles .ctf-tweet-meta a {
-  text-decoration: none;
-  color: #787878 !important;
-}
 .twitter-feed h3::before {
   background-image: url("img/twitter.svg");
-}
-.twitter-feed #ctf .ctf-item {
-  padding: 0 !important;
-}
-.twitter-feed #ctf.ctf-narrow .ctf-tweet-content {
-  padding: 0 !important;
-}
-.twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
-  min-height: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.instagram-feed {
-  margin-top: 0 !important;
 }
 .instagram-feed h3::before {
   background-image: url("img/instagram.svg");
