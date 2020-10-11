@@ -117,16 +117,16 @@ $social-date-size: 0.8rem;
   }
 
   #ctf .ctf-item {
-    // padding: 0 !important; // Override default
-    // position: relative;
+    padding: 0 !important; // Override default
+    position: relative;
   }
 
   #ctf.ctf-narrow .ctf-tweet-content {
-    // padding: 0 !important; // Override default
+    padding: 0 !important; // Override default
   }
 
   #ctf.ctf-super-narrow .ctf-author-box {
-    // margin-bottom: 0 !important; // Override default
+    margin-bottom: 0 !important; // Override default
   }
 }
 

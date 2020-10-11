@@ -1404,6 +1404,17 @@ input.search-input:-moz-placeholder {
 .twitter-feed h3::before {
   background-image: url("img/twitter.svg");
 }
+.twitter-feed #ctf .ctf-item {
+  padding: 0 !important;
+  position: relative;
+}
+.twitter-feed #ctf.ctf-narrow .ctf-tweet-content {
+  padding: 0 !important;
+}
+.twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
+  margin-bottom: 0 !important;
+}
+
 .instagram-feed {
   margin-top: 0 !important;
 }
