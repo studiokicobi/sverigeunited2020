@@ -21,7 +21,7 @@ $social-date-size: 0.8rem;
 }
 
 .social-kort {
-  padding: 2rem;
+  padding: 2rem 2rem 3rem 2rem;
   background-color: white;
   margin-bottom: 0;
   @include drop-shadow;
@@ -46,10 +46,14 @@ $social-date-size: 0.8rem;
     }
   }
 
+  #cff .cff-item {
+    position: relative; // so we can position the date
+  }
+
   #cff .cff-date {
-    // position the facebook date
+    // position the date
     position: absolute;
-    bottom: 0;
+    bottom: -1rem;
     right: 0;
     font-size: $social-date-size;
     color: $light-text;
