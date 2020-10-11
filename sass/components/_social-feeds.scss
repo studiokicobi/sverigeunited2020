@@ -65,6 +65,7 @@ $social-date-size: 0.8rem;
     right: $social-padding;
     font-size: $social-date-size;
     color: $light-text;
+    width: auto;
   }
 
   h3::before {
@@ -83,8 +84,8 @@ $social-date-size: 0.8rem;
 
     a {
       // Restyle the anchor
-      // text-decoration: none;
-      // color: $light-text !important; // override default
+      text-decoration: none;
+      color: $light-text !important; // override default
     }
   }
 
@@ -93,22 +94,23 @@ $social-date-size: 0.8rem;
   }
 
   #ctf .ctf-item {
-    // padding: 0 !important; // Override default
+    padding: 0 !important; // Override default
+    position: relative;
   }
 
   #ctf.ctf-narrow .ctf-tweet-content {
-    // padding: 0 !important; // Override default
+    padding: 0 !important; // Override default
   }
 
   #ctf.ctf-super-narrow .ctf-author-box {
-    // min-height: 0 !important; // Override default
-    // margin-bottom: 0 !important; // Override default
+    min-height: 0 !important; // Override default
+    margin-bottom: 0 !important; // Override default
   }
 }
 
 //Instagram
 .instagram-feed {
-  // margin-top: 0 !important; // Override style in base.scss
+  margin-top: 0 !important; // Override style in base.scss
 
   h3::before {
     background-image: url("img/instagram.svg");

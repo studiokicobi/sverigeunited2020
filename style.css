@@ -1376,6 +1376,7 @@ input.search-input:-moz-placeholder {
   right: 1rem;
   font-size: 0.8rem;
   color: #787878;
+  width: auto;
 }
 .facebook-feed h3::before {
   background-image: url("img/facebook.svg");
@@ -1387,8 +1388,27 @@ input.search-input:-moz-placeholder {
   right: 1rem;
   font-size: 0.8rem;
 }
+.twitter-feed #ctf.ctf-styles .ctf-tweet-meta a {
+  text-decoration: none;
+  color: #787878 !important;
+}
 .twitter-feed h3::before {
   background-image: url("img/twitter.svg");
+}
+.twitter-feed #ctf .ctf-item {
+  padding: 0 !important;
+  position: relative;
+}
+.twitter-feed #ctf.ctf-narrow .ctf-tweet-content {
+  padding: 0 !important;
+}
+.twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.instagram-feed {
+  margin-top: 0 !important;
 }
 .instagram-feed h3::before {
   background-image: url("img/instagram.svg");
