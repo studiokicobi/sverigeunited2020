@@ -1371,7 +1371,8 @@ input.search-input:-moz-placeholder {
 .social-kort #cff .cff-item {
   position: relative;
 }
-.social-kort #cff .cff-date {
+.social-kort #cff .cff-date,
+.social-kort .ctf-tweet-meta {
   position: absolute;
   bottom: -1rem;
   right: 0;
@@ -1384,15 +1385,19 @@ input.search-input:-moz-placeholder {
   background-image: url("img/facebook.svg");
 }
 
-.twitter-feed #ctf.ctf-styles .ctf-tweet-meta {
+.twitter-feed .twitter-feed #ctf .ctf-item {
   position: absolute;
+  min-height: 100%;
   bottom: 1rem;
-  right: 1rem;
-  font-size: 0.8rem;
+  right: 0;
+  padding-top: 0.5rem;
 }
-.twitter-feed #ctf.ctf-styles .ctf-tweet-meta a {
-  text-decoration: none;
-  color: #787878 !important;
+.twitter-feed .twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .twitter-feed h3::before {
   background-image: url("img/twitter.svg");

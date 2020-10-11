@@ -50,7 +50,8 @@ $social-date-size: 0.8rem;
     position: relative; // so we can position the date
   }
 
-  #cff .cff-date {
+  #cff .cff-date,
+  .ctf-tweet-meta {
     // position the date
     position: absolute;
     bottom: -1rem;
@@ -78,19 +79,35 @@ $social-date-size: 0.8rem;
 
 // Twitter
 .twitter-feed {
-  #ctf.ctf-styles .ctf-tweet-meta {
-    // position the tweet date
+  .twitter-feed #ctf .ctf-item {
     position: absolute;
-    bottom: $social-padding;
-    right: $social-padding;
-    font-size: $social-date-size;
-
-    a {
-      // Restyle the anchor
-      text-decoration: none;
-      color: $light-text !important; // override default
-    }
+    min-height: 100%;
+    bottom: 1rem;
+    right: 0;
+    padding-top: 0.5rem;
   }
+
+  .twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  // #ctf.ctf-styles .ctf-tweet-meta {
+  //     // position the tweet date
+  //     position: absolute;
+  //     bottom: $social-padding;
+  //     right: $social-padding;
+  //     font-size: $social-date-size;
+
+  //     a {
+  //       // Restyle the anchor
+  //       text-decoration: none;
+  //       color: $light-text !important; // override default
+  //     }
+  //   }
 
   h3::before {
     background-image: url("img/twitter.svg");
