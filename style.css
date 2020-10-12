@@ -1244,6 +1244,9 @@ input.search-input:-moz-placeholder {
 .hero-container .hero-full-bleed .hero {
   position: relative;
 }
+.hero-container .hero-full-bleed .hero__heading {
+  max-width: 50%;
+}
 .hero-container .hero-full-bleed .hero__text {
   max-width: 50%;
 }

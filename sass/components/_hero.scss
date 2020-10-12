@@ -9,6 +9,10 @@
     .hero {
       position: relative;
 
+      &__heading {
+        max-width: 50%;
+      }
+
       &__text {
         max-width: 50%;
 
