@@ -330,6 +330,28 @@
 // End media query for small screens
 // ------------------------------------------------------------------------
 
+// Show or hide the main search icon in the nav
+.search-icon {
+  display: none !important;
+}
+
+@media screen and (min-width: 48rem) {
+  .search-icon {
+    display: block !important;
+  }
+}
+
+// Show or hide the second search icon
+.search-icon-2 {
+  display: block !important;
+}
+
+@media screen and (min-width: 48rem) {
+  .search-icon-2 {
+    display: none !important;
+  }
+}
+
 // Responsive nav
 // responsive-nav.js 1.0.39 by @viljamis
 // ------------------------
@@ -447,15 +469,3 @@
     }
   }
 }
-
-// File these!
-
-// .search-icon {
-//   display: none !important;
-// }
-
-// @media screen and (min-width: 48rem) {
-//   .search-icon {
-//     display: block !important;
-//   }
-// }

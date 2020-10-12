@@ -631,6 +631,24 @@ body.page-child .header-wrapper li.current-menu-ancestor.menu-item-has-children 
     display: none;
   }
 }
+.search-icon {
+  display: none !important;
+}
+
+@media screen and (min-width: 48rem) {
+  .search-icon {
+    display: block !important;
+  }
+}
+.search-icon-2 {
+  display: block !important;
+}
+
+@media screen and (min-width: 48rem) {
+  .search-icon-2 {
+    display: none !important;
+  }
+}
 .nav-collapse ul {
   margin: 0;
   padding: 0;
