@@ -41,7 +41,6 @@
 
 			<div class="logo">
 				<a href="<?php echo home_url(); ?>" class="logo__link">
-					<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 					<img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/img/sverige-united-logo.svg" alt="Sverige United" class="logo-img">
 					<span class="logo__text">SVERIGE UNITED</span>
 				</a>
@@ -53,11 +52,12 @@
 
 		</header>
 
+		<div class="search-icon search-icon-2">
+			<img class="open" alt="Search" src="<?php echo get_template_directory_uri(); ?>/img/search.svg">
+		</div>
+
 	</div>
 
-	<div class="search-icon search-icon-2">
-		<img class="open" alt="Search" src="<?php echo get_template_directory_uri(); ?>/img/search.svg">
-	</div>
 
 	<div class="search-box full-bleed">
 		<div class="search-box__content wrapper">
