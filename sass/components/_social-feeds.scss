@@ -96,12 +96,12 @@ $social-date-size: 0.8rem;
     right: 0;
     bottom: 0;
     left: 0;
+  }
 
-    a {
-      // Restyle the anchor
-      text-decoration: none;
-      color: $light-text !important; // override default
-    }
+  .ctf-tweet-meta a {
+    // Restyle the anchor
+    text-decoration: none;
+    color: $light-text !important; // override default
   }
 
   .ctf-author-box {

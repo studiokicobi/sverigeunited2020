@@ -1401,7 +1401,7 @@ input.search-input:-moz-placeholder {
   bottom: 0;
   left: 0;
 }
-.twitter-feed .ctf-tweet-items a {
+.twitter-feed .ctf-tweet-meta a {
   text-decoration: none;
   color: #787878 !important;
 }
