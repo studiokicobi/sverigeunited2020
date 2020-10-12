@@ -50,11 +50,11 @@
 				<?php theme_base_nav(); ?>
 			</nav>
 
-		</header>
+			<div class="search-icon search-icon-2">
+				<img class="open" alt="Search" src="<?php echo get_template_directory_uri(); ?>/img/search.svg">
+			</div>
 
-		<div class="search-icon search-icon-2">
-			<img class="open" alt="Search" src="<?php echo get_template_directory_uri(); ?>/img/search.svg">
-		</div>
+		</header>
 
 	</div>
 
