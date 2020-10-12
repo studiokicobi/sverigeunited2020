@@ -1,24 +1,16 @@
 <?php
-/*
- *  Author: Todd Motto | @toddmotto
- *  URL: theme_base.com | @theme_base
- *  Custom functions, support, custom post types and more.
+
+/**
+ * Remove the WP Custom Fields meta box for faster admin load times
+ * 
+ * https://www.advancedcustomfields.com/blog/acf-pro-5-5-13-update/
  */
 
-/* Remove the WP Custom Fields meta box for faster admin load times
-	 https://www.advancedcustomfields.com/blog/acf-pro-5-5-13-update/
-   ------------------------------------------------------------------ */
 add_filter('acf/settings/remove_wp_meta_box', '__return_true');
 
-/*------------------------------------*\
-	External Modules/Files
-\*------------------------------------*/
 
-// Load external files here
-
-/*------------------------------------*\
-	Theme Support
-\*------------------------------------*/
+/* Theme Support
+------------------------------------*/
 
 if (!isset($content_width)) {
     $content_width = 1080;
@@ -40,9 +32,8 @@ if (function_exists('add_theme_support')) {
 
 }
 
-/*------------------------------------*\
-	Disable fullscreen editor
-\*------------------------------------*/
+/* Disable fullscreen editor
+------------------------------------*/
 
 $user = wp_get_current_user();
 
@@ -56,9 +47,8 @@ if ($user = 'Colin Lewis') {
 }
 
 
-/*------------------------------------*\
-	Functions
-\*------------------------------------*/
+/* Functions
+------------------------------------*/
 
 // Theme_Base navigation
 function theme_base_nav()
@@ -85,7 +75,7 @@ function theme_base_nav()
     );
 }
 
-// Add search icon to  nav
+// Add search icon to the nav
 function add_search_icon($items, $args)
 {
     if ($args->theme_location == 'header-menu') {
@@ -114,21 +104,13 @@ function theme_base_header_scripts()
     }
 }
 
-// Load Theme_Base conditional scripts
-// function theme_base_conditional_scripts()
-// {
-//     if (is_page('pagenamehere')) {
-//         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-//         wp_enqueue_script('scriptname'); // Enqueue it!
-//     }
-// }
-
 // Load Theme_Base styles
 function theme_base_styles()
 {
     wp_register_style('theme_base', get_template_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'), 'all');
-    wp_enqueue_style('theme_base'); // Enqueue it!
+    wp_enqueue_style('theme_base'); // Enqueue it
 }
+
 
 add_action('enqueue_block_editor_assets', 'add_block_editor_assets', 10, 0);
 function add_block_editor_assets()
@@ -195,29 +177,29 @@ function wpdocs_remove_page_fields()
 }
 
 // If Dynamic Sidebar Exists
-if (function_exists('register_sidebar')) {
-    // Define Sidebar Widget Area 1
-    register_sidebar(array(
-        'name' => __('Widget Area 1', 'theme_base'),
-        'description' => __('Description for this widget-area...', 'theme_base'),
-        'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
+// if (function_exists('register_sidebar')) {
+// Define Sidebar Widget Area 1
+// register_sidebar(array(
+//     'name' => __('Widget Area 1', 'theme_base'),
+//     'description' => __('Description for this widget-area...', 'theme_base'),
+//     'id' => 'widget-area-1',
+//     'before_widget' => '<div id="%1$s" class="%2$s">',
+//     'after_widget' => '</div>',
+//     'before_title' => '<h3>',
+//     'after_title' => '</h3>'
+// ));
 
-    // Define Sidebar Widget Area 2
-    register_sidebar(array(
-        'name' => __('Widget Area 2', 'theme_base'),
-        'description' => __('Description for this widget-area...', 'theme_base'),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-}
+// Define Sidebar Widget Area 2
+//     register_sidebar(array(
+//         'name' => __('Widget Area 2', 'theme_base'),
+//         'description' => __('Description for this widget-area...', 'theme_base'),
+//         'id' => 'widget-area-2',
+//         'before_widget' => '<div id="%1$s" class="%2$s">',
+//         'after_widget' => '</div>',
+//         'before_title' => '<h3>',
+//         'after_title' => '</h3>'
+//     ));
+// }
 
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
@@ -296,7 +278,7 @@ add_filter('excerpt_more', 'theme_base_excerpt_more');
 function theme_base_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'theme_base') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Visa artikeln', 'theme_base') . '</a>';
 }
 
 // Remove 'text/css' from our enqueued stylesheet
@@ -312,17 +294,8 @@ function remove_thumbnail_dimensions($html)
     return $html;
 }
 
-// Custom Gravatar in Settings > Discussion
-// function theme_base_gravatar($avatar_defaults)
-// {
-//     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
-//     $avatar_defaults[$myavatar] = "Custom Gravatar";
-//     return $avatar_defaults;
-// }
-
-/*------------------------------------*\
-	Actions + Filters + ShortCodes
-\*------------------------------------*/
+/* Actions + Filters + ShortCodes
+------------------------------------*/
 
 // Add Actions
 add_action('init', 'theme_base_header_scripts'); // Add Custom Scripts to wp_head
@@ -375,9 +348,8 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 // Shortcodes above would be nested like this -
 // [theme_base_shortcode_demo] [theme_base_shortcode_demo_2] Here's the page title! [/theme_base_shortcode_demo_2] [/theme_base_shortcode_demo]
 
-/*------------------------------------*\
-	ShortCode Functions
-\*------------------------------------*/
+/* ShortCode Functions
+------------------------------------*/
 
 // Shortcode Demo with Nested Capability
 function theme_base_shortcode_demo($atts, $content = null)
@@ -391,21 +363,12 @@ function theme_base_shortcode_demo_2($atts, $content = null) // Demo Heading H2 
     return '<h2>' . $content . '</h2>';
 }
 
-/*------------------------------------*\
-	Responsive video embeds
-\*------------------------------------*/
+/* Responsive video embeds
+------------------------------------*/
 add_theme_support('responsive-embeds');
 
-
-
-/*------------------------------------*\
-	Remove page title option
-\*------------------------------------*/
-
-
-/*------------------------------------*\
-	Blocks
-\*------------------------------------*/
+/* Add the blocks
+------------------------------------*/
 
 if (
     function_exists('acf_register_block_type')
