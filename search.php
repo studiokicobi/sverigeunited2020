@@ -23,7 +23,7 @@
 			</div>
 
 			<div class="search-result-grid__content">
-				<?php get_template_part('search-loop');
+				<?php get_template_part('template-parts/search-loop');
 				?>
 			</div>
 

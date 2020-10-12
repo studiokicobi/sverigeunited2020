@@ -955,14 +955,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/search-loop.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/search-loop.php",
-		"oF": 0
-		},
 	"/search.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1035,6 +1027,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/pagination.php",
+		"oF": 0
+		},
+	"/template-parts/search-loop.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/search-loop.php",
 		"oF": 0
 		},
 	"/template-parts/searchform.php": {
