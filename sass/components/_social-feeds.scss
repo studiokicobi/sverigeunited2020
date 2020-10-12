@@ -53,7 +53,7 @@ $social-date-size: 0.8rem;
   #cff .cff-date {
     // position the date
     position: absolute;
-    bottom: -2rem;
+    bottom: -3rem;
     right: 0;
     font-size: $social-date-size;
     color: $light-text;
@@ -102,18 +102,22 @@ $social-date-size: 0.8rem;
     left: 0;
   }
 
-  .ctf-tweet-meta a {
-    // Restyle the anchor
-    text-decoration: none;
-    color: $light-text !important; // override default
-    font-size: $social-date-size;
+  .ctf-tweet-meta {
+    margin-right: 0 !important;
+
+    a {
+      // Restyle the anchor
+      text-decoration: none;
+      color: $light-text !important; // override default
+      font-size: $social-date-size;
+    }
   }
 
   .ctf-author-box {
     min-height: 0 !important;
     margin-bottom: 0 !important;
     position: absolute;
-    bottom: 0.7rem;
+    bottom: -0.3rem;
     right: 0;
   }
 

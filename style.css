@@ -1394,7 +1394,7 @@ input.search-input:-moz-placeholder {
 }
 .social-kort #cff .cff-date {
   position: absolute;
-  bottom: -2rem;
+  bottom: -3rem;
   right: 0;
   font-size: 0.8rem;
   color: #787878;
@@ -1425,6 +1425,9 @@ input.search-input:-moz-placeholder {
   bottom: 0;
   left: 0;
 }
+.twitter-feed .ctf-tweet-meta {
+  margin-right: 0 !important;
+}
 .twitter-feed .ctf-tweet-meta a {
   text-decoration: none;
   color: #787878 !important;
@@ -1434,7 +1437,7 @@ input.search-input:-moz-placeholder {
   min-height: 0 !important;
   margin-bottom: 0 !important;
   position: absolute;
-  bottom: 0.7rem;
+  bottom: -0.3rem;
   right: 0;
 }
 .twitter-feed h3::before {
