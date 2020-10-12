@@ -1394,7 +1394,7 @@ input.search-input:-moz-placeholder {
 }
 .social-kort #cff .cff-date {
   position: absolute;
-  bottom: -1rem;
+  bottom: -2rem;
   right: 0;
   font-size: 0.8rem;
   color: #787878;
@@ -1434,7 +1434,7 @@ input.search-input:-moz-placeholder {
   min-height: 0 !important;
   margin-bottom: 0 !important;
   position: absolute;
-  bottom: 0;
+  bottom: 0.7rem;
   right: 0;
 }
 .twitter-feed h3::before {
