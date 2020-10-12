@@ -1436,6 +1436,7 @@ input.search-input:-moz-placeholder {
 .instagram-feed #sb_instagram .sbi_info {
   color: #111111;
   text-align: left;
+  margin-top: 1rem;
 }
 
 .search-result-grid {
