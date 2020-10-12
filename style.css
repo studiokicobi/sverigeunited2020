@@ -586,7 +586,7 @@ body.page-child .header-wrapper li.current-menu-ancestor.menu-item-has-children 
   }
   .header-wrapper .header .nav-toggle.active::before {
     font-size: 2rem;
-    line-height: 0.75;
+    line-height: 0.87;
     content: "×";
   }
   .header-wrapper .header .nav {
