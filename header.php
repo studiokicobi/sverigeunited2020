@@ -11,6 +11,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
+	<!-- Preload fonts -->
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/swedensansbold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/swedensans-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
 	<?php
 	// Prevent FOUC.
 	// @https://gist.github.com/johnpolacek/3827270
@@ -26,6 +30,7 @@
 	</script>
 
 	<link href="//www.google-analytics.com" rel="dns-prefetch">
+
 	<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
 	<link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
