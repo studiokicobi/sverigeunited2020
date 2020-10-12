@@ -102,6 +102,7 @@ $social-date-size: 0.8rem;
     // Restyle the anchor
     text-decoration: none;
     color: $light-text !important; // override default
+    font-size: $social-date-size;
   }
 
   .ctf-author-box {
