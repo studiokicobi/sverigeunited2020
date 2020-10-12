@@ -96,6 +96,12 @@ $social-date-size: 0.8rem;
     right: 0;
     bottom: 0;
     left: 0;
+
+    a {
+      // Restyle the anchor
+      text-decoration: none;
+      color: $light-text !important; // override default
+    }
   }
 
   .ctf-author-box {
@@ -105,20 +111,6 @@ $social-date-size: 0.8rem;
     bottom: 0;
     right: 0;
   }
-
-  // #ctf.ctf-styles .ctf-tweet-meta {
-  //     // position the tweet date
-  //     position: absolute;
-  //     bottom: $social-padding;
-  //     right: $social-padding;
-  //     font-size: $social-date-size;
-
-  //     a {
-  //       // Restyle the anchor
-  //       text-decoration: none;
-  //       color: $light-text !important; // override default
-  //     }
-  //   }
 
   h3::before {
     background-image: url("img/twitter.svg");

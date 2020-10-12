@@ -1401,6 +1401,10 @@ input.search-input:-moz-placeholder {
   bottom: 0;
   left: 0;
 }
+.twitter-feed .ctf-tweet-items a {
+  text-decoration: none;
+  color: #787878 !important;
+}
 .twitter-feed .ctf-author-box {
   min-height: 0 !important;
   margin-bottom: 0 !important;
