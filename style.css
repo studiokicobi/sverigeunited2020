@@ -988,6 +988,8 @@ p.knapp {
 body.page-parent .search-box,
 body.page-child .search-box {
   background-color: #00477f;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
 }
 
 input.search-input::-webkit-input-placeholder {

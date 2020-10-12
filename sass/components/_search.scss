@@ -46,6 +46,8 @@
 body.page-parent .search-box,
 body.page-child .search-box {
   background-color: darken($blue, 4%);
+  border-top: 0.1rem solid rgba(white, 0.2);
+  border-bottom: 0.1rem solid rgba(white, 0.2);
 }
 
 input.search-input::placeholder,
