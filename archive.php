@@ -6,7 +6,7 @@ get_header();
 
 ?>
 
-<main role="main" class="nyheter">
+<main class="nyheter">
 	<section>
 
 		<?php get_template_part('template-parts/nyheter'); ?>
