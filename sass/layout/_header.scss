@@ -335,7 +335,7 @@
   display: none !important;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: $header-breakpoint-2) {
   .search-icon {
     display: block !important;
   }
@@ -346,7 +346,7 @@
   display: block !important;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (max-width: $header-breakpoint-2) {
   .search-icon-2 {
     display: none !important;
   }
