@@ -126,7 +126,7 @@ function theme_base_header_scripts()
 // Load Theme_Base styles
 function theme_base_styles()
 {
-    wp_register_style('theme_base', get_template_directory_uri() . '/style.css', array(), '1.2', 'all');
+    wp_register_style('theme_base', get_template_directory_uri() . '/style.css', array(), filemtime(), 'all');
     wp_enqueue_style('theme_base'); // Enqueue it!
 }
 
