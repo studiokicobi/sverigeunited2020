@@ -55,7 +55,7 @@
 
 	</div>
 
-	<div class="search-icon-2">
+	<div class="search-icon search-icon-2">
 		<img class="open" alt="Search" src="<?php echo get_template_directory_uri(); ?>/img/search.svg">
 	</div>
 

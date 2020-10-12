@@ -647,6 +647,13 @@ body.page-child .header-wrapper li.current-menu-ancestor.menu-item-has-children 
 @media screen and (max-width: 55em) {
   .search-icon-2 {
     display: block !important;
+    position: absolute;
+    top: 4.93rem;
+    right: 4.6rem;
+  }
+  .search-icon-2 img {
+    max-height: 1rem;
+    width: auto;
   }
 }
 .nav-collapse ul {
