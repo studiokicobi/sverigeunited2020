@@ -1421,7 +1421,7 @@ input.search-input:-moz-placeholder {
   position: relative;
 }
 .twitter-feed #ctf.ctf-narrow .ctf-tweet-content {
-  padding: 0 !important;
+  padding: 0.5rem 0 0 0 !important;
 }
 .twitter-feed #ctf.ctf-super-narrow .ctf-author-box {
   margin-bottom: 0 !important;
@@ -1432,6 +1432,10 @@ input.search-input:-moz-placeholder {
 }
 .instagram-feed h3::before {
   background-image: url("img/instagram.svg");
+}
+.instagram-feed #sb_instagram .sbi_info {
+  color: #111111;
+  text-align: left;
 }
 
 .search-result-grid {

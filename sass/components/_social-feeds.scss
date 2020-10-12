@@ -123,7 +123,7 @@ $social-date-size: 0.8rem;
   }
 
   #ctf.ctf-narrow .ctf-tweet-content {
-    padding: 0 !important; // Override default
+    padding: 0.5rem 0 0 0 !important; // Override default
   }
 
   #ctf.ctf-super-narrow .ctf-author-box {
@@ -137,5 +137,10 @@ $social-date-size: 0.8rem;
 
   h3::before {
     background-image: url("img/instagram.svg");
+  }
+
+  #sb_instagram .sbi_info {
+    color: $text-color;
+    text-align: left;
   }
 }
