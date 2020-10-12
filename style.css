@@ -1401,6 +1401,9 @@ input.search-input:-moz-placeholder {
 .facebook-feed h3::before {
   background-image: url("img/facebook.svg");
 }
+.facebook-feed #cff .cff-photo img {
+  width: 100%;
+}
 
 .twitter-feed #ctf {
   min-height: 100%;

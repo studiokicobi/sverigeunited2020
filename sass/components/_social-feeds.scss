@@ -74,6 +74,10 @@ $social-date-size: 0.8rem;
   h3::before {
     background-image: url("img/facebook.svg");
   }
+
+  #cff .cff-photo img {
+    width: 100%;
+  }
 }
 
 // Twitter
