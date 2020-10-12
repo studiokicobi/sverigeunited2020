@@ -644,7 +644,7 @@ body.page-child .header-wrapper li.current-menu-ancestor.menu-item-has-children 
   display: none !important;
 }
 
-@media screen and (min-width: 55em) {
+@media screen and (max-width: 55em) {
   .search-icon-2 {
     display: block !important;
   }
