@@ -25,7 +25,7 @@
 		}
 	</style>
 
-	<script type="text/javascript">
+	<script>
 		document.documentElement.className = 'no-fouc';
 	</script>
 
@@ -42,11 +42,11 @@
 
 	<div class="header-wrapper full-bleed">
 
-		<header class="header clear wrapper" role="banner">
+		<header class="header clear wrapper">
 
 			<div class="logo">
 				<a href="<?php echo home_url(); ?>" class="logo__link">
-					<img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/img/sverige-united-logo.svg" alt="Sverige United" class="logo-img">
+					<img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/img/sverige-united-logo.svg" alt="Sverige United">
 					<span class="logo__text">SVERIGE UNITED</span>
 				</a>
 			</div>
