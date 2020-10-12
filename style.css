@@ -732,15 +732,6 @@ body.page-child .header-wrapper li.current-menu-ancestor.menu-item-has-children 
   border-bottom: 0.175rem solid transparent;
 }
 
-.search-icon {
-  display: none !important;
-}
-
-@media screen and (min-width: 48rem) {
-  .search-icon {
-    display: block !important;
-  }
-}
 .footer {
   background-color: white;
   padding: 2rem 0;
