@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main role="main">
+<main>
 	<!-- section -->
 	<section class="single-content">
 
@@ -18,10 +18,11 @@
 					<!-- post thumbnail -->
 					<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
 					?>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<?php the_post_thumbnail(); // Fullsize image for the single post 
-							?>
-						</a>
+
+						<?php foreach ((get_the_category()) as $cat) {
+							if (!($cat->cat_ID == '22')) echo '<a href="' . the_permalink() . '" title="' . the_title() . '">' . the_post_thumbnail() . '</a>';
+						} ?>
+
 					<?php endif; ?>
 					<!-- /post thumbnail -->
 
