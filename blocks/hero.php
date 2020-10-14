@@ -65,17 +65,13 @@ if (!empty($block['align'])) {
                                     <p class="ensam-kort__text"><?php the_sub_field('kort_text'); ?></p>
                                 <?php endif; ?>
 
-                                <?php $kort_lank = get_sub_field('kort_lank'); ?>
-                                <?php if ($kort_lank) : ?>
+                                <?php
+                                $kort_lank = get_sub_field('kort_lank');
+                                if ($kort_lank) :
+                                    $link_target = $kort_lank['target'] ? $kort_lank['target'] : '_self';
+                                ?>
 
-                                    <?php if ($kort_lank['target']) {
-                                        $target = esc_attr($kort_lank['target']);
-                                    } else {
-                                        $target = '_self';
-                                    }
-                                    ?>
-
-                                    <a class="knapp ensam-kort__knapp" href="<?php echo esc_url($kort_lank['url']); ?>" target="<?php echo $target; ?>"><?php echo esc_html($kort_lank['title']); ?></a>
+                                    <a class="knapp ensam-kort__knapp" href="<?php echo esc_url($kort_lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($kort_lank['title']); ?></a>
                                 <?php endif; ?>
 
                                 <?php $kort_rubrik = get_sub_field('kort_rubrik'); ?>

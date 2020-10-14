@@ -34,6 +34,9 @@ if (!empty($block['align'])) {
 </style>
 
 <?php $lank = get_field('lank'); ?>
-<?php if ($lank) : ?>
-    <a id=" <?php echo esc_attr($id); ?>" class="knapp <?php echo esc_attr($classes); ?>" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($lank['target']); ?>"><?php echo esc_html($lank['title']); ?></a>
+<?php if ($lank) :
+    $link_target = $lank['target'] ? $lank['target'] : '_self';
+?>
+
+    <a id=" <?php echo esc_attr($id); ?>" class="knapp <?php echo esc_attr($classes); ?>" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($lank['title']); ?></a>
 <?php endif; ?>

@@ -8,7 +8,7 @@ if (is_page(7)) {
 
 <?php get_header(); ?>
 
-<main role="main">
+<main>
 	<section>
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

@@ -46,9 +46,12 @@ if (!empty($block['align'])) {
 						<h2 class="standard-anchor">
 						<?php endif; ?>
 
-						<?php $lank = get_sub_field('lank'); ?>
+						<?php
+						$lank = get_sub_field('lank');
+						$link_target = $lank['target'] ? $lank['target'] : '_self';
+						?>
 
-						<a href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($lank['target']); ?>">
+						<a href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
 							<?php echo esc_html($lank['title']); ?>
 						</a>
 						</h2>
@@ -59,7 +62,7 @@ if (!empty($block['align'])) {
 
 						<?php if (get_sub_field('visa_lanken_som_en_knapp') == 1) : ?>
 							<p>
-								<a class="knapp" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($lank['target']); ?>">
+								<a class="knapp" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
 									<?php echo esc_html($lank['title']); ?>
 								</a>
 							</p>

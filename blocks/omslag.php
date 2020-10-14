@@ -35,23 +35,26 @@ if (!empty($block['align'])) {
 	<?php if (have_rows('omslag')) : ?>
 		<?php while (have_rows('omslag')) : the_row(); ?>
 
+			<?php
+			$lank = get_sub_field('lank');
+			$link_target = $lank['target'] ? $lank['target'] : '_self';
+			?>
+
 			<div class="omslag">
 
 				<?php if (get_sub_field('bakgrundsbild')) : ?>
 
-					<a class="omslag__img-link" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($lank['target']); ?>">
+					<a class="omslag__img-link" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
 						<img src="<?php the_sub_field('bakgrundsbild'); ?>" />
 					</a>
 
 				<?php endif ?>
-				<?php $lank = get_sub_field('lank'); ?>
+
 				<?php if ($lank) : ?>
 
 					<div class="omslag-content">
 						<h2 class="omslag-content__heading">
-							<!-- <a class="omslag-content__link" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($lank['target']); ?>"> -->
 							<?php echo esc_html($lank['title']); ?>
-							<!-- </a> -->
 						</h2>
 					</div>
 

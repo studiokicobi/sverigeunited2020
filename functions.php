@@ -1,5 +1,8 @@
 <?php
 
+/* ACF
+------------------------------------*/
+
 /**
  * Remove the WP Custom Fields meta box for faster admin load times
  * 
@@ -7,6 +10,44 @@
  */
 
 add_filter('acf/settings/remove_wp_meta_box', '__return_true');
+
+
+/**
+ * Responsive Image Helper Function
+ *
+ * @param string $image_id the id of the image (from ACF or similar)
+ * @param string $image_size the size of the thumbnail image or custom image size
+ * @param string $max_width the max width this image will be shown to build the sizes attribute 
+ * 
+ * https://www.awesomeacf.com/responsive-images-wordpress-acf/
+ */
+
+// Set larger max image
+add_filter('max_srcset_image_width', 'custom_acf_max_srcset_image_width', 10, 2);
+
+// set the max image width 
+function custom_acf_max_srcset_image_width()
+{
+    return 2200;
+}
+
+// Responsive Image Helper Function
+function custom_acf_responsive_image($image_id, $image_size, $max_width)
+{
+
+    // check the image ID is not blank
+    if ($image_id != '') {
+
+        // set the default src image size
+        $image_src = wp_get_attachment_image_url($image_id, $image_size);
+
+        // set the srcset with various image sizes
+        $image_srcset = wp_get_attachment_image_srcset($image_id, $image_size);
+
+        // generate the markup for the responsive image
+        echo 'src="' . $image_src . '" srcset="' . $image_srcset . '" sizes="(max-width: ' . $max_width . ') 100vw, ' . $max_width . '"';
+    }
+}
 
 
 /* Theme Support
@@ -91,16 +132,16 @@ function theme_base_header_scripts()
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
         // wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        // wp_enqueue_script('conditionizr'); // Enqueue it!
+        // wp_enqueue_script('conditionizr'); 
 
         // wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        // wp_enqueue_script('modernizr'); // Enqueue it!
+        // wp_enqueue_script('modernizr'); 
 
         wp_register_script('responsive-nav', get_template_directory_uri() . '/js/lib/responsive-nav.min.js', array(), '1.0.0'); // Responsive Nav
-        wp_enqueue_script('responsive-nav'); // Enqueue it!
+        wp_enqueue_script('responsive-nav');
 
         wp_register_script('theme_basescripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('theme_basescripts'); // Enqueue it!
+        wp_enqueue_script('theme_basescripts');
     }
 }
 
@@ -108,7 +149,7 @@ function theme_base_header_scripts()
 function theme_base_styles()
 {
     wp_register_style('theme_base', get_template_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'), 'all');
-    wp_enqueue_style('theme_base'); // Enqueue it
+    wp_enqueue_style('theme_base');
 }
 
 
@@ -343,7 +384,7 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-// add_shortcode('theme_base_shortcode_demo', 'theme_base_shortcode_demo'); // You can place [theme_base_shortcode_demo] in Pages, Posts now.
+// add_shortcode('theme_base_shortcode_demo', 'theme_base_shortcode_demo');
 
 // Shortcodes above would be nested like this -
 // [theme_base_shortcode_demo] [theme_base_shortcode_demo_2] Here's the page title! [/theme_base_shortcode_demo_2] [/theme_base_shortcode_demo]
@@ -352,16 +393,16 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 ------------------------------------*/
 
 // Shortcode Demo with Nested Capability
-function theme_base_shortcode_demo($atts, $content = null)
-{
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
+// function theme_base_shortcode_demo($atts, $content = null)
+// {
+//     return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
+// }
 
 // Shortcode Demo with simple <h2> tag
-function theme_base_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
-}
+// function theme_base_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
+// {
+//     return '<h2>' . $content . '</h2>';
+// }
 
 /* Responsive video embeds
 ------------------------------------*/

@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<main role="main">
+<main>
 	<section>
 
 		<div class="search-result-grid">

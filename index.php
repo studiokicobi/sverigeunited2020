@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main role="main">
+<main>
 	<section>
 
 		<h1>Latest Posts</h1>
