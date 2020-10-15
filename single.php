@@ -20,7 +20,14 @@
 					?>
 
 						<?php foreach ((get_the_category()) as $cat) {
-							if (!($cat->cat_ID == '22')) echo '<a href="' . the_permalink() . '" title="' . the_title() . '">' . the_post_thumbnail() . '</a>';
+							// if (!($cat->cat_ID == '3'))
+							// echo '';
+							// elseif (!($cat->cat_ID == '21'))
+							// echo '';
+							if (($cat->cat_ID == '22')) // Don't show the post thumb if this is the Video category.
+								echo '';
+							else
+								echo '<a href="' . the_permalink() . '" title="' . the_title() . '">' . the_post_thumbnail() . '</a>';
 						} ?>
 
 					<?php endif; ?>
