@@ -1201,6 +1201,9 @@ input.search-input:-moz-placeholder {
 .omslag {
   position: relative;
   border: 0.1rem solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 15rem;
 }
 .omslag__img-link::after {
   content: "";
