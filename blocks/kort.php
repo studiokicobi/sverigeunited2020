@@ -52,7 +52,7 @@ if (!empty($block['align'])) {
 						?>
 
 						<a href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
-							<?php echo esc_html($lank['title']); ?>
+							<?php the_sub_field('rubrik'); ?>
 						</a>
 						</h2>
 
