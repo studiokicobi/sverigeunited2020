@@ -16,8 +16,12 @@
 }
 
 .omslag {
+  // Background-image placed via the block: ../blocks/omslag.php
   position: relative;
   border: 0.1rem solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 15rem;
 
   &__img-link {
     &::after {
