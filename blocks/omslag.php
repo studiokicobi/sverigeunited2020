@@ -29,6 +29,12 @@ if (!empty($block['align'])) {
 
 <style type="text/css">
 	<?php echo '#' . $id; ?> {}
+
+	.omslag {
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 15rem;
+	}
 </style>
 
 <div id="<?php echo esc_attr($id); ?>" class="omslag-wrapper <?php echo esc_attr($classes); ?>">
@@ -40,23 +46,18 @@ if (!empty($block['align'])) {
 			$link_target = $lank['target'] ? $lank['target'] : '_self';
 			?>
 
-			<div class="omslag">
-
-				<?php if (get_sub_field('bakgrundsbild')) : ?>
-
-					<a class="omslag__img-link" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
-						<img src="<?php the_sub_field('bakgrundsbild'); ?>" />
-					</a>
-
-				<?php endif ?>
+			<div class="omslag" style="background-image: url('<?php the_sub_field('bakgrundsbild'); ?>');">
 
 				<?php if ($lank) : ?>
+					<a class="omslag__img-link" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
 
-					<div class="omslag-content">
-						<h2 class="omslag-content__heading">
-							<?php echo esc_html($lank['title']); ?>
-						</h2>
-					</div>
+						<div class="omslag-content">
+							<h2 class="omslag-content__heading">
+								<?php echo esc_html($lank['title']); ?>
+							</h2>
+						</div>
+
+					</a>
 
 				<?php endif; ?>
 			</div>
