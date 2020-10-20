@@ -21,7 +21,7 @@
 					if ($postcat[0]->cat_ID != '22') {
 						// Not in excluded category
 						if (has_post_thumbnail()) : // Check if Thumbnail exists 
-							the_post_thumbnail(array('class' => 'post-thumbnail'));
+							the_post_thumbnail('large', array('class' => 'post-thumbnail'));
 						endif;
 					}
 					?>
