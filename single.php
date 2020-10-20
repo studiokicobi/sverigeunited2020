@@ -15,20 +15,16 @@
 
 					<span class="date"><?php the_time('j F Y'); ?></span>
 
-					<!-- post thumbnail -->
-					<?php 
-					if (has_post_thumbnail()) : 
-					
-					// Check if Thumbnail exists 
-						foreach ((get_the_category()) as $cat) {
-							if (($cat->cat_ID == '22')) 
-							// Don't show the post thumb if this is the Video category.
-							else
-								the_post_thumbnail();
-							} 
-					 endif; 
-					 ?>
-					<!-- /post thumbnail -->
+					<?php
+					// Get the category ID and check against category 22
+					$postcat = get_the_category($query->post->ID);
+					if ($postcat[0]->cat_ID != '22') {
+						// Not in excluded category
+						if (has_post_thumbnail()) : // Check if Thumbnail exists 
+							the_post_thumbnail(); // Fullsize image for the single post 
+						endif;
+					}
+					?>
 
 					<?php the_content(); ?>
 
