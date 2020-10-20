@@ -1499,7 +1499,7 @@ input.search-input:-moz-placeholder {
   width: 100%;
   height: auto;
 }
-.single-content img > p {
+.single-content img + p {
   margin-top: 1rem;
 }
 .single-content .date {
