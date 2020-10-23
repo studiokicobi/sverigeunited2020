@@ -1,7 +1,5 @@
 .hero-container {
   margin-top: -3rem !important; // Override "body:not(.home) article > * + *" in reset.scss
-  margin-bottom: 5rem;
-
   .hero-full-bleed {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -40,7 +38,7 @@
 
   .light {
     // Light theme
-    background-color: $blue-gray;
+    background-color: $bg;
 
     .hero {
       &__heading {
