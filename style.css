@@ -1257,6 +1257,7 @@ input.search-input:-moz-placeholder {
 }
 .hero-container .hero-full-bleed .hero {
   position: relative;
+  min-height: 13rem;
 }
 .hero-container .hero-full-bleed .hero__heading {
   max-width: 50%;

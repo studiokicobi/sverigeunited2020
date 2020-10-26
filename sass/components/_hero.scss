@@ -6,6 +6,7 @@
 
     .hero {
       position: relative;
+      min-height: 13rem; // In case we have no content
 
       &__heading {
         max-width: 50%;
