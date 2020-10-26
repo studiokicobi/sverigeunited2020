@@ -1243,6 +1243,7 @@ input.search-input:-moz-placeholder {
 .hero-container .hero-full-bleed {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  min-height: 300px;
 }
 .hero-container .hero-full-bleed .hero {
   position: relative;
