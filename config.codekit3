@@ -686,6 +686,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/sass/components/_image.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_image.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/sass/components/_kort.scss": {
 		"aP": 1,
 		"bl": 0,
