@@ -1632,27 +1632,5 @@ input.search-input:-moz-placeholder {
   color: #005293;
   text-decoration: underline;
 }
-.nyheter .nyheter-grid {
-  display: grid;
-  grid-template-columns: 10rem 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
-}
-@media screen and (max-width: 55em) {
-  .nyheter .nyheter-grid {
-    display: block;
-  }
-}
-.nyheter .nyheter-grid .grid-kort-wrapper {
-  margin-top: 1rem;
-}
-.nyheter .nyheter-grid img {
-  margin-bottom: 1.5rem;
-}
-.nyheter .nyheter-grid .date {
-  margin-bottom: 1rem;
-  display: block;
-}
 
 /*# sourceMappingURL=style.css.map */
