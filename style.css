@@ -1608,6 +1608,7 @@ input.search-input:-moz-placeholder {
   margin-bottom: 3rem;
 }
 .nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort {
+  position: relative;
   padding: 2rem;
   -webkit-column-break-inside: avoid;
      -moz-column-break-inside: avoid;
