@@ -21,6 +21,7 @@
       &__image {
         max-width: 8.6rem;
         max-height: 8.6rem;
+        border-radius: 3px;
       }
     }
 
@@ -42,6 +43,27 @@
       align-self: flex-end;
       text-align: right;
       flex-grow: 1;
+    }
+
+    @media screen and (max-width: $footer-breakpoint) {
+      display: block;
+      text-align: center;
+      .profil-image-wrapper {
+        &__image {
+          margin: 0 auto 2rem auto;
+        }
+      }
+
+      .profil-text-content {
+        &__description {
+          margin: 0 auto;
+        }
+      }
+
+      .profil-email {
+        text-align: center;
+        margin-top: 1rem;
+      }
     }
   }
 }

@@ -280,6 +280,16 @@ a:hover, a:active, a:focus {
   margin-top: 3rem;
 }
 
+.wp-block-separator {
+  margin: 48px 0;
+  border-top: 0px;
+  border-color: #cdd4dc;
+}
+
+.wp-block-group {
+  margin: 4rem 0;
+}
+
 @font-face {
   font-family: "sweden_sansregular";
   src: url("fonts/swedensans-webfont.eot");
@@ -1048,7 +1058,7 @@ input.search-input:-moz-placeholder {
 }
 
 .enkel-kort {
-  padding: 2rem;
+  padding: 3rem;
   background-color: white;
   border: 0.1rem solid white;
   box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
@@ -1057,8 +1067,8 @@ input.search-input:-moz-placeholder {
 .grid-kort-wrapper {
   display: grid;
   grid-gap: 1rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .search-results .grid-kort-wrapper {
@@ -1189,8 +1199,10 @@ input.search-input:-moz-placeholder {
 .omslag-wrapper {
   display: grid;
   grid-gap: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border: 0.1rem solid white;
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
 }
 
 @supports (width: min(20rem, 100%)) {
@@ -1222,8 +1234,8 @@ input.search-input:-moz-placeholder {
   line-height: 1.4;
   max-width: 12rem;
   position: absolute;
-  top: 3rem;
-  left: 3rem;
+  top: 2rem;
+  left: 2rem;
   padding: 0;
 }
 .omslag .omslag-content__heading {
@@ -1320,6 +1332,7 @@ input.search-input:-moz-placeholder {
 .profil-wrapper .profil .profil-image-wrapper__image {
   max-width: 8.6rem;
   max-height: 8.6rem;
+  border-radius: 3px;
 }
 .profil-wrapper .profil .profil-text-content__role {
   color: #787878;
@@ -1333,6 +1346,22 @@ input.search-input:-moz-placeholder {
   align-self: flex-end;
   text-align: right;
   flex-grow: 1;
+}
+@media screen and (max-width: 55em) {
+  .profil-wrapper .profil {
+    display: block;
+    text-align: center;
+  }
+  .profil-wrapper .profil .profil-image-wrapper__image {
+    margin: 0 auto 2rem auto;
+  }
+  .profil-wrapper .profil .profil-text-content__description {
+    margin: 0 auto;
+  }
+  .profil-wrapper .profil .profil-email {
+    text-align: center;
+    margin-top: 1rem;
+  }
 }
 
 .text-grupp {
@@ -1364,8 +1393,8 @@ input.search-input:-moz-placeholder {
 .social-kort-wrapper {
   display: grid;
   grid-gap: 1rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @supports (width: min(20rem, 100%)) {
@@ -1472,6 +1501,23 @@ input.search-input:-moz-placeholder {
   color: #111111;
   text-align: left;
   margin-top: 1rem;
+}
+
+.wp-block-image {
+  position: relative;
+}
+.wp-block-image img {
+  border: 0.1rem solid white;
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
+}
+.wp-block-image figcaption {
+  bottom: 24px;
+  left: 24px;
+  margin: 0;
+  padding: 0 4px;
+  background: #111111;
+  color: #edf2f7;
+  font-size: 80%;
 }
 
 .search-result-grid {

@@ -44,7 +44,7 @@ if (!empty($block['align'])) {
                 </div>
                 <div class="profil-text-content">
                     <h2 class="profil-text-content__name"><?php the_sub_field('namn'); ?></h2>
-                    <h3 class="profil-text-content__role"><?php the_sub_field('roll'); ?></h3>
+                    <p class="profil-text-content__role"><?php the_sub_field('roll'); ?></p>
                     <p class="profil-text-content__description"><?php the_sub_field('beskrivning'); ?></p>
                 </div>
 
