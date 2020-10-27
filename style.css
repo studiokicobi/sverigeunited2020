@@ -1274,7 +1274,7 @@ input.search-input:-moz-placeholder {
     right: 0;
   }
 }
-.hero-container .hero-full-bleed .hero__kort .ensam-kort::after {
+.hero-container .hero-full-bleed .hero .ensam-kort::after {
   content: "";
   clear: both;
   display: table;
