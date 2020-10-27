@@ -1238,6 +1238,7 @@ input.search-input:-moz-placeholder {
 
 .hero-container {
   margin-top: -3rem !important;
+  margin-bottom: -4rem;
 }
 .hero-container .hero-full-bleed {
   padding-top: 3rem;
@@ -1259,9 +1260,7 @@ input.search-input:-moz-placeholder {
   }
 }
 .hero-container .hero-full-bleed .hero__kort {
-  position: absolute;
-  top: 0;
-  right: 0;
+  transform: translateY(-4rem);
 }
 @media screen and (max-width: 1179px) {
   .hero-container .hero-full-bleed .hero__kort {

@@ -1,5 +1,10 @@
 .hero-container {
   margin-top: -3rem !important; // Override "body:not(.home) article > * + *" in reset.scss
+
+  // Pull up the content that follows the hero container
+  // See __kort below
+  margin-bottom: -4rem;
+
   .hero-full-bleed {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -21,9 +26,9 @@
       }
 
       &__kort {
-        position: absolute;
-        top: 0;
-        right: 0;
+        // Move the card up in line with heading.
+        // Because of this we need a negative margin on the container. See .hero-container above.
+        transform: translateY(-4rem);
 
         @media screen and (max-width: 1179px) {
           right: 2rem;
@@ -68,6 +73,7 @@
   }
 }
 
+// Clear the container to clear __kort
 .hero-container::after {
   content: "";
   clear: both;
