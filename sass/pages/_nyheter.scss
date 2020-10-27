@@ -86,6 +86,56 @@
     }
   }
 
+  /* Card columns for Nyheter
+   ------------------------------------------------------------ */
+  .nyheter-cols {
+    margin-left: 15%;
+
+    .nyheter-kort-wrapper {
+      columns: 22rem;
+      column-gap: 1rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+
+      .nyheter-kort {
+        padding: 2rem;
+        break-inside: avoid;
+        background-color: white;
+        border: 0.1rem solid white;
+        margin-bottom: 0;
+        @include drop-shadow;
+
+        @include on-event {
+          @include hover-shadow;
+        }
+
+        h2 {
+          a {
+            color: $text-color;
+            text-decoration: none;
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+            }
+
+            @include on-event {
+              text-decoration: none;
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .nyheter-grid {
     // display: grid;
     // grid-template-columns: 10rem 1fr;

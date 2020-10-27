@@ -15,10 +15,10 @@ $page = 23;
 <?php get_template_part('template-parts/category-nav'); ?>
 
 <div class="nyheter-grid">
-    <div>
+    <div class="yearly-nav">
         <?php get_template_part('template-parts/yearly-nav'); ?>
     </div>
-    <div>
+    <div class="nyheter-cols">
         <?php get_template_part('template-parts/loop'); ?>
     </div>
 </div>
