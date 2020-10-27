@@ -106,7 +106,7 @@
         break-inside: avoid;
         background-color: white;
         border: 0.1rem solid white;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
         @include drop-shadow;
 
         @include on-event {
