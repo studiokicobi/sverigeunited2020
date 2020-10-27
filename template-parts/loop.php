@@ -1,8 +1,10 @@
-<div class="grid-kort-wrapper">
+<!-- <div class="grid-kort-wrapper"> -->
+<div class="nyheter-kort-wrapper">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div class="grid-kort">
+			<!-- <div class="grid-kort"> -->
+			<div class="nyheter-kort">
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

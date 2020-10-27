@@ -1151,6 +1151,51 @@ input.search-input:-moz-placeholder {
   margin-top: 1rem;
 }
 
+/* Card columns for Nyheter
+   ------------------------------------------------------------ */
+.nyheter-kort-wrapper {
+  -webkit-columns: 30rem;
+     -moz-columns: 30rem;
+          columns: 30rem;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.nyheter-kort-wrapper .nyheter-kort {
+  padding: 2rem;
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid-column;
+  background-color: white;
+  border: 0.1rem solid white;
+  margin-bottom: 0;
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
+}
+.nyheter-kort-wrapper .nyheter-kort:hover, .nyheter-kort-wrapper .nyheter-kort:active, .nyheter-kort-wrapper .nyheter-kort:focus {
+  border: 0.1rem solid #005293;
+  box-shadow: 0px 5px 0px 0px rgba(0, 82, 147, 0.25);
+}
+.nyheter-kort-wrapper .nyheter-kort h2 a {
+  color: #111111;
+  text-decoration: none;
+}
+.nyheter-kort-wrapper .nyheter-kort h2 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.nyheter-kort-wrapper .nyheter-kort h2 a:hover, .nyheter-kort-wrapper .nyheter-kort h2 a:active, .nyheter-kort-wrapper .nyheter-kort h2 a:focus {
+  text-decoration: none;
+}
+.nyheter-kort-wrapper .nyheter-kort img {
+  width: 100%;
+}
+
 .partners > * {
   display: flex;
   flex-wrap: wrap;
