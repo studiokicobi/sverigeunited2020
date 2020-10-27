@@ -1632,6 +1632,12 @@ input.search-input:-moz-placeholder {
   color: #005293;
   text-decoration: underline;
 }
+.nyheter .yearly-nav {
+  margin-top: 1.7rem;
+}
+.nyheter .nyheter-cols {
+  margin-top: 1rem;
+}
 .nyheter .nyheter-grid {
   display: grid;
   grid-template-columns: 10rem 1fr;
