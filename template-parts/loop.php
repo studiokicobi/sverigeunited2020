@@ -16,7 +16,7 @@
 					?>
 
 						<h2>
-							<a href="<?php echo $url; ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							<a href="<?php echo $url; ?>" title="<?php the_title(); ?>" target="_blank"><?php the_title(); ?></a>
 						</h2>
 
 						<span class="date"><?php the_time('j F Y'); ?></span>
