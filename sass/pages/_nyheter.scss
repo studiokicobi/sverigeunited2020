@@ -68,9 +68,9 @@
         list-style-type: none;
         margin-bottom: 1rem;
 
-        @media screen and (max-width: $header-breakpoint-2) {
-          display: inline;
-        }
+        // @media screen and (max-width: $header-breakpoint-2) {
+        //   display: inline;
+        // }
 
         a {
           text-decoration: none;

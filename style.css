@@ -1577,11 +1577,6 @@ input.search-input:-moz-placeholder {
   list-style-type: none;
   margin-bottom: 1rem;
 }
-@media screen and (max-width: 55em) {
-  .nyheter__yearly-nav ul li {
-    display: inline;
-  }
-}
 .nyheter__yearly-nav ul li a {
   text-decoration: none;
   color: #111111;
