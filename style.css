@@ -1263,6 +1263,11 @@ input.search-input:-moz-placeholder {
   top: 0;
   right: 0;
 }
+.hero-container .hero-full-bleed .hero__kort::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 @media screen and (max-width: 1179px) {
   .hero-container .hero-full-bleed .hero__kort {
     right: 2rem;
@@ -1273,11 +1278,6 @@ input.search-input:-moz-placeholder {
     position: relative;
     right: 0;
   }
-}
-.hero-container .hero-full-bleed .hero .ensam-kort::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 .hero-container .light {
   background-color: #edf2f7;

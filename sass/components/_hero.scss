@@ -25,6 +25,12 @@
         top: 0;
         right: 0;
 
+        &::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
         @media screen and (max-width: 1179px) {
           right: 2rem;
         }
@@ -33,12 +39,6 @@
           position: relative;
           right: 0;
         }
-      }
-
-      .ensam-kort::after {
-        content: "";
-        clear: both;
-        display: table;
       }
     }
   }
