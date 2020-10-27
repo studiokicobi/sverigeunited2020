@@ -1591,6 +1591,9 @@ input.search-input:-moz-placeholder {
   color: #005293;
   text-decoration: underline;
 }
+.nyheter .yearly-nav {
+  float: left;
+}
 .nyheter .nyheter-cols {
   margin-left: 15%;
 }
