@@ -1632,55 +1632,27 @@ input.search-input:-moz-placeholder {
   color: #005293;
   text-decoration: underline;
 }
-.nyheter .yearly-nav {
-  float: left;
+.nyheter .nyheter-grid {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
 }
-.nyheter .nyheter-cols {
-  margin-left: 15%;
+@media screen and (max-width: 55em) {
+  .nyheter .nyheter-grid {
+    display: block;
+  }
 }
-.nyheter .nyheter-cols .nyheter-kort-wrapper {
-  -webkit-columns: 22rem;
-     -moz-columns: 22rem;
-          columns: 22rem;
-  -webkit-column-gap: 1rem;
-     -moz-column-gap: 1rem;
-          column-gap: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-.nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort {
-  position: relative;
-  padding: 2rem;
-  -webkit-column-break-inside: avoid;
-     -moz-column-break-inside: avoid;
-          break-inside: avoid;
-  background-color: white;
-  border: 0.1rem solid white;
+.nyheter .nyheter-grid .grid-kort-wrapper {
   margin-top: 1rem;
-  transform: translateY(-1rem);
-  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
 }
-.nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort:hover, .nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort:active, .nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort:focus {
-  border: 0.1rem solid #005293;
-  box-shadow: 0px 5px 0px 0px rgba(0, 82, 147, 0.25);
+.nyheter .nyheter-grid img {
+  margin-bottom: 1.5rem;
 }
-.nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort h2 a {
-  color: #111111;
-  text-decoration: none;
-}
-.nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort h2 a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-.nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort h2 a:hover, .nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort h2 a:active, .nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort h2 a:focus {
-  text-decoration: none;
-}
-.nyheter .nyheter-cols .nyheter-kort-wrapper .nyheter-kort img {
-  width: 100%;
+.nyheter .nyheter-grid .date {
+  margin-bottom: 1rem;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
