@@ -5,7 +5,7 @@
 // Simple blank card styles
 // ------------------------
 .enkel-kort {
-  padding: 3rem;
+  padding: 2rem;
   background-color: white;
   border: 0.1rem solid white;
   @include drop-shadow;
@@ -17,8 +17,8 @@
 .grid-kort-wrapper {
   display: grid;
   grid-gap: 1rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .search-results {
