@@ -1292,6 +1292,7 @@ input.search-input:-moz-placeholder {
 .hero-container .dark .hero__text {
   color: white;
 }
+
 .hero-container::after {
   content: "";
   clear: both;

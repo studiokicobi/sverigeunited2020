@@ -66,12 +66,12 @@
       }
     }
   }
+}
 
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+.hero-container::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .search-results {
