@@ -4,9 +4,10 @@
 
 .header .search-icon {
   cursor: pointer;
-  padding: 0.2rem 0.15rem 0.2rem 0.2rem;
+  padding: 0.2rem 1rem 0.2rem 0.2rem;
   margin-left: 0.3rem;
-
+  margin-top: -3px;
+  
   @include on-event {
     transition: all 200ms linear;
   }
@@ -38,6 +39,7 @@
         font-family: $bold;
         width: 100%;
         margin-left: 0.5rem;
+        outline: 0;
       }
     }
   }

@@ -5,6 +5,7 @@
     @include drop-shadow;
   }
   figcaption {
+    position: absolute;
     bottom: 24px;
     left: 24px;
     margin: 0;
@@ -12,5 +13,11 @@
     background: $text-color;
     color: $bg;
     font-size: 80%;
+  }
+  &.no-border {
+    img {
+      border: 0;
+      box-shadow: none;
+    }
   }
 }

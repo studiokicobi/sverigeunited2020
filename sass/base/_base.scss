@@ -116,6 +116,8 @@ a {
 // Youtube embed
 .wp-block-embed-youtube {
   margin-top: 1.5rem;
+  border: 0.1rem solid white;
+  @include drop-shadow;
 }
 
 .wp-block-columns ~ .wp-block-columns {
