@@ -92,6 +92,12 @@ $social-date-size: 0.8rem;
     bottom: 1rem;
     right: 0;
     padding-top: 0.5rem;
+
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
   }
 
   .ctf-tweet-items {
