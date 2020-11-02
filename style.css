@@ -274,6 +274,8 @@ a:hover, a:active, a:focus {
 }
 .wp-block-embed-youtube {
   margin-top: 1.5rem;
+  border: 0.1rem solid white;
+  box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
 }
 
 .wp-block-columns ~ .wp-block-columns {
@@ -978,8 +980,9 @@ p.knapp {
 
 .header .search-icon {
   cursor: pointer;
-  padding: 0.2rem 0.15rem 0.2rem 0.2rem;
+  padding: 0.2rem 1rem 0.2rem 0.2rem;
   margin-left: 0.3rem;
+  margin-top: -3px;
 }
 .header .search-icon:hover, .header .search-icon:active, .header .search-icon:focus {
   transition: all 200ms linear;
@@ -1009,6 +1012,7 @@ p.knapp {
   font-family: "sweden_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   margin-left: 0.5rem;
+  outline: 0;
 }
 
 body.page-parent .search-box,
@@ -1250,7 +1254,6 @@ input.search-input:-moz-placeholder {
 
 .hero-container {
   margin-top: -3rem !important;
-  margin-bottom: -4rem;
 }
 .hero-container .hero-full-bleed {
   padding-top: 3rem;
@@ -1263,6 +1266,11 @@ input.search-input:-moz-placeholder {
 .hero-container .hero-full-bleed .hero__heading {
   max-width: 50%;
 }
+@media screen and (max-width: 781px) {
+  .hero-container .hero-full-bleed .hero__heading {
+    max-width: 100%;
+  }
+}
 .hero-container .hero-full-bleed .hero__text {
   max-width: 50%;
 }
@@ -1270,9 +1278,6 @@ input.search-input:-moz-placeholder {
   .hero-container .hero-full-bleed .hero__text {
     max-width: 100%;
   }
-}
-.hero-container .hero-full-bleed .hero__kort {
-  transform: translateY(-4rem);
 }
 @media screen and (max-width: 1179px) {
   .hero-container .hero-full-bleed .hero__kort {
@@ -1390,6 +1395,12 @@ input.search-input:-moz-placeholder {
   margin-left: -20%;
 }
 
+@supports (width: min(375px, 100%)) {
+  .text-grupp__col-1,
+.text-grupp__col-2 {
+    margin-left: 0;
+  }
+}
 .social-kort-wrapper {
   display: grid;
   grid-gap: 1rem;
@@ -1511,6 +1522,7 @@ input.search-input:-moz-placeholder {
   box-shadow: 0px 1px 2px 0px rgba(17, 17, 17, 0.08);
 }
 .wp-block-image figcaption {
+  position: absolute;
   bottom: 24px;
   left: 24px;
   margin: 0;
@@ -1518,6 +1530,10 @@ input.search-input:-moz-placeholder {
   background: #111111;
   color: #edf2f7;
   font-size: 80%;
+}
+.wp-block-image.no-border img {
+  border: 0;
+  box-shadow: none;
 }
 
 .search-result-grid {
