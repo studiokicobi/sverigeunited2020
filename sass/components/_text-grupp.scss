@@ -33,3 +33,10 @@
     margin-left: -20%;
   }
 }
+
+@supports (width: min(375px, 100%)) {
+  .text-grupp__col-1,
+  .text-grupp__col-2 {
+    margin-left: 0;
+  }
+}
