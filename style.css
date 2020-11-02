@@ -1496,7 +1496,7 @@ input.search-input:-moz-placeholder {
   background-image: url("img/twitter.svg");
 }
 .twitter-feed #ctf .ctf-item {
-  padding: 0 !important;
+  padding: 0 0 1em 0 !important;
   position: relative;
 }
 .twitter-feed #ctf.ctf-narrow .ctf-tweet-content {
