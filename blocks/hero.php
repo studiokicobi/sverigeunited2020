@@ -46,10 +46,6 @@ if (!empty($block['align'])) {
             <div class="hero wrapper">
                 <?php while (have_rows('layout')) : the_row(); ?>
                     <h1 class="hero__heading"><?php the_sub_field('rubrik'); ?></h1>
-                    <?php $hero_text = get_sub_field('brodtext'); ?>
-                    <?php if ($hero_text) : ?>
-                        <p class="hero__text"><?php the_sub_field('brodtext'); ?></p>
-                    <?php endif; ?>
 
                     <?php if (have_rows('ensam_kort')) : ?>
                         <?php while (have_rows('ensam_kort')) : the_row(); ?>
@@ -81,6 +77,12 @@ if (!empty($block['align'])) {
 
                         <?php endwhile; ?>
                     <?php endif; ?>
+
+                    <?php $hero_text = get_sub_field('brodtext'); ?>
+                    <?php if ($hero_text) : ?>
+                        <p class="hero__text"><?php the_sub_field('brodtext'); ?></p>
+                    <?php endif; ?>
+
                 <?php endwhile; ?>
             </div>
         </div>
