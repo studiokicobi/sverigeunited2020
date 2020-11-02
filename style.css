@@ -1488,8 +1488,18 @@ input.search-input:-moz-placeholder {
   bottom: 0;
   left: 0;
 }
+.twitter-feed .ctf-tweet-items::after {
+  clear: both;
+  content: "";
+  display: table;
+}
 .twitter-feed .ctf-tweet-meta {
   margin-right: 0 !important;
+}
+.twitter-feed .ctf-tweet-meta::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 .twitter-feed .ctf-tweet-meta a {
   text-decoration: none;

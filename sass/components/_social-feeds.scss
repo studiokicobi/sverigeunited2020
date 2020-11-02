@@ -106,10 +106,22 @@ $social-date-size: 0.8rem;
     right: 0;
     bottom: 0;
     left: 0;
+
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
   }
 
   .ctf-tweet-meta {
     margin-right: 0 !important;
+
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
 
     a {
       // Restyle the anchor
