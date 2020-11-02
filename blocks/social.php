@@ -38,7 +38,7 @@ if (!empty($block['align'])) {
 
         <?php while (have_rows('social_konto')) : the_row(); ?>
 
-            <div class="social-kort <?php the_sub_field('kontotyp'); ?>-feed">
+            <div class="social-kort <?php the_sub_field('kontotyp'); ?>-feed clearfix">
                 <h3><?php the_sub_field('rubrik'); ?></h3>
                 <?php
                 $shortcode = get_sub_field('kortkod');
