@@ -1452,7 +1452,7 @@ input.search-input:-moz-placeholder {
 }
 .social-kort #cff .cff-date {
   position: absolute;
-  bottom: -3rem;
+  bottom: 0;
   right: 0;
   font-size: 0.8rem;
   color: #787878;
