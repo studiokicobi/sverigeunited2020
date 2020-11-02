@@ -21,6 +21,10 @@
   }
   .text-grupp__col-2 {
     margin-left: -10%;
+
+    @media screen and (max-width: 781px) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -31,6 +35,10 @@
   }
   .text-grupp__col-2 {
     margin-left: -20%;
+
+    @media screen and (max-width: 781px) {
+      margin-left: 0;
+    }
   }
 }
 
