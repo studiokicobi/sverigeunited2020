@@ -1150,7 +1150,7 @@ input.search-input:-moz-placeholder {
   .ensam-kort {
     max-width: 100%;
     float: none;
-    margin-top: 3rem;
+    margin-top: 3rem auto;
     padding-top: 1rem;
   }
 }
@@ -1538,6 +1538,10 @@ input.search-input:-moz-placeholder {
 .wp-block-image.no-border img {
   border: 0;
   box-shadow: none;
+}
+
+.wp-block-column > .wp-block-image {
+  margin-top: 1rem;
 }
 
 .search-result-grid {
