@@ -92,36 +92,19 @@ $social-date-size: 0.8rem;
     bottom: 1rem;
     right: 0;
     padding-top: 0.5rem;
-
-    &::after {
-      clear: both;
-      content: "";
-      display: table;
-    }
   }
 
   .ctf-tweet-items {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    &::after {
-      clear: both;
-      content: "";
-      display: table;
-    }
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
   }
 
   .ctf-tweet-meta {
+    margin-top: 1rem;
     margin-right: 0 !important;
-
-    &::after {
-      clear: both;
-      content: "";
-      display: table;
-    }
 
     a {
       // Restyle the anchor
