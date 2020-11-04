@@ -1286,19 +1286,19 @@ input.search-input:-moz-placeholder {
 .hero-container .light {
   background-color: #edf2f7;
 }
-.hero-container .light .hero__content--heading {
+.hero-container .light .hero__heading {
   color: #111111;
 }
-.hero-container .light .hero__content--text {
+.hero-container .light .hero__text {
   color: #111111;
 }
 .hero-container .dark {
   background-color: #005293;
 }
-.hero-container .dark .hero__content--heading {
+.hero-container .dark .hero__heading {
   color: #fecb00;
 }
-.hero-container .dark .hero__content--text {
+.hero-container .dark .hero__text {
   color: white;
 }
 

@@ -16,12 +16,6 @@
         @media screen and (max-width: 781px) {
           max-width: 100%;
         }
-
-        &--heading {
-        }
-
-        &--text {
-        }
       }
 
       &__kort {
@@ -42,14 +36,12 @@
     background-color: $bg;
 
     .hero {
-      &__content {
-        &--heading {
-          color: $text-color;
-        }
+      &__heading {
+        color: $text-color;
+      }
 
-        &--text {
-          color: $text-color;
-        }
+      &__text {
+        color: $text-color;
       }
     }
   }
@@ -59,14 +51,12 @@
     background-color: $blue;
 
     .hero {
-      &__content {
-        &--heading {
-          color: $brand;
-        }
+      &__heading {
+        color: $brand;
+      }
 
-        &--text {
-          color: white;
-        }
+      &__text {
+        color: white;
       }
     }
   }

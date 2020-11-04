@@ -47,11 +47,11 @@ if (!empty($block['align'])) {
                 <?php while (have_rows('layout')) : the_row(); ?>
 
                     <div class="hero__content">
-                        <h1 class="hero__content--heading"><?php the_sub_field('rubrik'); ?></h1>
+                        <h1 class="hero__heading"><?php the_sub_field('rubrik'); ?></h1>
 
                         <?php $hero_text = get_sub_field('brodtext'); ?>
                         <?php if ($hero_text) : ?>
-                            <p class="hero__content--text"><?php the_sub_field('brodtext'); ?></p>
+                            <p class="hero__text"><?php the_sub_field('brodtext'); ?></p>
                         <?php endif; ?>
                     </div>
 
