@@ -5,8 +5,10 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-    .hero {
+    // If there is a card used in the hero
+    .hero.med-kort {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
 
@@ -26,6 +28,22 @@
         @media screen and (max-width: 781px) {
           position: relative;
           right: 0;
+        }
+      }
+
+      //If there is no card used in the hero
+      .hero {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        &__text {
+          max-width: 50%;
+        }
+
+        @media screen and (max-width: 781px) {
+          max-width: 100%;
         }
       }
     }

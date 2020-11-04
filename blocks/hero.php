@@ -27,13 +27,23 @@ if (!empty($block['align'])) {
 }
 ?>
 
+
+
 <style type="text/css">
     <?php echo '#' . $id; ?> {
         /* Add styles that use ACF values here */
     }
 </style>
 
-
+<?php
+if (have_rows('layout')) :
+    while (have_rows('layout')) : the_row();
+        if (have_rows('ensam_kort')) :
+            $kort_class = ' med-kort';
+        endif;
+    endwhile;
+endif;
+?>
 
 <div id="<?php echo esc_attr($id); ?>" class="hero-container <?php echo esc_attr($classes); ?>">
     <?php if (have_rows('layout')) : ?>
@@ -43,7 +53,7 @@ if (!empty($block['align'])) {
         <?php endwhile; ?>
 
         <div class="hero-full-bleed full-bleed <?php echo $theme; ?>">
-            <div class="hero wrapper">
+            <div class="hero wrapper<?php echo ' ' . $kort_class; ?>">
                 <?php while (have_rows('layout')) : the_row(); ?>
 
                     <div class="hero__content">

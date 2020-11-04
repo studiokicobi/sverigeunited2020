@@ -1259,28 +1259,43 @@ input.search-input:-moz-placeholder {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.hero-container .hero-full-bleed .hero {
+.hero-container .hero-full-bleed .hero.med-kort {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.hero-container .hero-full-bleed .hero__content {
+.hero-container .hero-full-bleed .hero.med-kort__content {
   max-width: 50%;
 }
 @media screen and (max-width: 781px) {
-  .hero-container .hero-full-bleed .hero__content {
+  .hero-container .hero-full-bleed .hero.med-kort__content {
     max-width: 100%;
   }
 }
 @media screen and (max-width: 1179px) {
-  .hero-container .hero-full-bleed .hero__kort {
+  .hero-container .hero-full-bleed .hero.med-kort__kort {
     right: 2rem;
   }
 }
 @media screen and (max-width: 781px) {
-  .hero-container .hero-full-bleed .hero__kort {
+  .hero-container .hero-full-bleed .hero.med-kort__kort {
     position: relative;
     right: 0;
+  }
+}
+.hero-container .hero-full-bleed .hero.med-kort .hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.hero-container .hero-full-bleed .hero.med-kort .hero__text {
+  max-width: 50%;
+}
+@media screen and (max-width: 781px) {
+  .hero-container .hero-full-bleed .hero.med-kort .hero {
+    max-width: 100%;
   }
 }
 .hero-container .light {
