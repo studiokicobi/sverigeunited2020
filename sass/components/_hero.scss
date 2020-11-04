@@ -6,22 +6,21 @@
     padding-bottom: 3rem;
 
     .hero {
-      position: relative;
-      min-height: 13rem; // In case we have no content
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      &__heading {
+      &__content {
         max-width: 50%;
 
         @media screen and (max-width: 781px) {
           max-width: 100%;
         }
-      }
 
-      &__text {
-        max-width: 50%;
+        &--heading {
+        }
 
-        @media screen and (max-width: 781px) {
-          max-width: 100%;
+        &--text {
         }
       }
 
@@ -43,12 +42,14 @@
     background-color: $bg;
 
     .hero {
-      &__heading {
-        color: $text-color;
-      }
+      &__content {
+        &--heading {
+          color: $text-color;
+        }
 
-      &__text {
-        color: $text-color;
+        &--text {
+          color: $text-color;
+        }
       }
     }
   }
@@ -58,12 +59,14 @@
     background-color: $blue;
 
     .hero {
-      &__heading {
-        color: $brand;
-      }
+      &__content {
+        &--heading {
+          color: $brand;
+        }
 
-      &__text {
-        color: white;
+        &--text {
+          color: white;
+        }
       }
     }
   }
