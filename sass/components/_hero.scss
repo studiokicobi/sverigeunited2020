@@ -17,15 +17,16 @@
         align-items: flex-start;
       }
 
-      &__content {
+      .hero__content {
         max-width: 50%;
 
         @media screen and (max-width: 781px) {
           max-width: 100%;
+          max-width: 55ch;
         }
       }
 
-      &__kort {
+      .hero__kort {
         @media screen and (max-width: 1179px) {
           right: 2rem;
         }

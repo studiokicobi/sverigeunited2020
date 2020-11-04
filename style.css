@@ -1271,21 +1271,22 @@ input.search-input:-moz-placeholder {
     align-items: flex-start;
   }
 }
-.hero-container .hero-full-bleed .hero.med-kort__content {
+.hero-container .hero-full-bleed .hero.med-kort .hero__content {
   max-width: 50%;
 }
 @media screen and (max-width: 781px) {
-  .hero-container .hero-full-bleed .hero.med-kort__content {
+  .hero-container .hero-full-bleed .hero.med-kort .hero__content {
     max-width: 100%;
+    max-width: 55ch;
   }
 }
 @media screen and (max-width: 1179px) {
-  .hero-container .hero-full-bleed .hero.med-kort__kort {
+  .hero-container .hero-full-bleed .hero.med-kort .hero__kort {
     right: 2rem;
   }
 }
 @media screen and (max-width: 781px) {
-  .hero-container .hero-full-bleed .hero.med-kort__kort {
+  .hero-container .hero-full-bleed .hero.med-kort .hero__kort {
     position: relative;
     right: 0;
   }
