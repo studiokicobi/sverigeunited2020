@@ -17,15 +17,6 @@
         align-items: flex-start;
       }
 
-      .hero__content {
-        max-width: 50%;
-
-        @media screen and (max-width: 781px) {
-          max-width: 100%;
-          max-width: 55ch;
-        }
-      }
-
       .hero__kort {
         @media screen and (max-width: 1179px) {
           right: 2rem;
@@ -46,6 +37,10 @@
 
         &__content {
           max-width: 50%;
+
+          @media screen and (max-width: 781px) {
+            max-width: 100%;
+          }
         }
 
         @media screen and (max-width: 781px) {
