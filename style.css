@@ -1265,6 +1265,11 @@ input.search-input:-moz-placeholder {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 781px) {
+  .hero-container .hero-full-bleed .hero.med-kort {
+    flex-direction: column;
+  }
+}
 .hero-container .hero-full-bleed .hero.med-kort__content {
   max-width: 50%;
 }
@@ -1290,7 +1295,7 @@ input.search-input:-moz-placeholder {
   align-items: flex-start;
   flex-direction: column;
 }
-.hero-container .hero-full-bleed .hero.med-kort .hero__text {
+.hero-container .hero-full-bleed .hero.med-kort .hero__content {
   max-width: 50%;
 }
 @media screen and (max-width: 781px) {
