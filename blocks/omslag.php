@@ -52,7 +52,7 @@ if (!empty($block['align'])) {
 			<div class="omslag" style="background-image: url('
 			<?php
 			// Get the background image
-			$bgimage = get_sub_field('bakgrundsbild');
+			$bgimage = the_sub_field('bakgrundsbild');
 			$size = 'medium';
 			if ($bgimage) {
 				echo wp_get_attachment_image($bgimage, $size);
