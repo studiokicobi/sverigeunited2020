@@ -46,18 +46,7 @@ if (!empty($block['align'])) {
 			$link_target = $lank['target'] ? $lank['target'] : '_self';
 			?>
 
-			<!-- <div class="omslag" style="background-image: url('<?php //the_sub_field('bakgrundsbild'); 
-																	?>');"> -->
-
-			<div class="omslag" style="background-image: url('
-			<?php
-			// Get the background image
-			$bgimage = the_sub_field('bakgrundsbild');
-			$size = 'medium';
-			if ($bgimage) {
-				echo wp_get_attachment_image($bgimage, $size);
-			} ?>
-			');">
+			<div class="omslag" style="background-image: url('<?php the_sub_field('bakgrundsbild'); ?>');">
 
 				<?php if ($lank) : ?>
 					<a class="omslag__img-link" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
