@@ -130,16 +130,8 @@ add_filter('wp_nav_menu_items', 'add_search_icon', 10, 2);
 function theme_base_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-
-        // wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        // wp_enqueue_script('conditionizr'); 
-
-        // wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        // wp_enqueue_script('modernizr'); 
-
         wp_register_script('responsive-nav', get_template_directory_uri() . '/js/lib/responsive-nav.min.js', array(), '1.0.0'); // Responsive Nav
         wp_enqueue_script('responsive-nav');
-
         wp_register_script('theme_basescripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('theme_basescripts');
     }
@@ -340,11 +332,8 @@ function remove_thumbnail_dimensions($html)
 
 // Add Actions
 add_action('init', 'theme_base_header_scripts'); // Add Custom Scripts to wp_head
-// add_action('wp_print_scripts', 'theme_base_conditional_scripts'); // Add Conditional Page Scripts
-// add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'theme_base_styles'); // Add Theme Stylesheet
 add_action('init', 'register_theme_base_menu'); // Add Theme_Base Menu
-// add_action('init', 'create_post_type_theme_base'); // Add our Theme_Base Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'theme_base_wp_pagination'); // Add our theme_base Pagination
 
@@ -363,19 +352,13 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Add Filters
-// add_filter('avatar_defaults', 'theme_base_gravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
-// add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes (Commented out by default)
-// add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID (Commented out by default)
-// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> Page ID's (Commented out by default)
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-// add_filter('excerpt_more', 'theme_base_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-// add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'theme_base_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
@@ -383,26 +366,15 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
-// Shortcodes
-// add_shortcode('theme_base_shortcode_demo', 'theme_base_shortcode_demo');
-
-// Shortcodes above would be nested like this -
-// [theme_base_shortcode_demo] [theme_base_shortcode_demo_2] Here's the page title! [/theme_base_shortcode_demo_2] [/theme_base_shortcode_demo]
-
-/* ShortCode Functions
-------------------------------------*/
-
-// Shortcode Demo with Nested Capability
-// function theme_base_shortcode_demo($atts, $content = null)
-// {
-//     return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-// }
-
-// Shortcode Demo with simple <h2> tag
-// function theme_base_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-// {
-//     return '<h2>' . $content . '</h2>';
-// }
+// ACF allow unsafe HTML in shortcode field
+// Allows breaking change in ACF 6.2.5
+// https://www.advancedcustomfields.com/blog/acf-6-2-5-security-release/
+add_filter('acf/shortcode/allow_unsafe_html', function ($allowed, $atts) {
+    if ($atts['field'] === 'kortkod') {
+        return true;
+    }
+    return $allowed;
+}, 10, 2);
 
 /* Responsive video embeds
 ------------------------------------*/
