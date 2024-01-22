@@ -378,7 +378,7 @@ add_filter('acf/shortcode/allow_unsafe_html', function ($allowed, $atts) {
 
 /* ACF escape HTML
 ------------------------------------*/
-// add_filter('acf/the_field/escape_html_optin', '__return_true');
+add_filter('acf/the_field/escape_html_optin', '__return_true');
 
 
 /* Responsive video embeds
