@@ -369,12 +369,12 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 // ACF allow unsafe HTML in shortcode field
 // Allows breaking change in ACF 6.2.5
 // https://www.advancedcustomfields.com/blog/acf-6-2-5-security-release/
-add_filter('acf/shortcode/allow_unsafe_html', function ($allowed, $atts) {
-    if ($atts['field'] === 'kortkod') {
-        return true;
-    }
-    return $allowed;
-}, 10, 2);
+// add_filter('acf/shortcode/allow_unsafe_html', function ($allowed, $atts) {
+//     if ($atts['field'] === 'kortkod') {
+//         return true;
+//     }
+//     return $allowed;
+// }, 10, 2);
 
 /* Responsive video embeds
 ------------------------------------*/
