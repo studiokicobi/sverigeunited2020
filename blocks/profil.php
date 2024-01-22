@@ -45,8 +45,6 @@ if (!empty($block['align'])) {
                 <div class="profil-text-content">
                     <h2 class="profil-text-content__name"><?php the_sub_field('namn'); ?></h2>
                     <p class="profil-text-content__role"><?php the_sub_field('roll'); ?></p>
-                    <!-- <p class="profil-text-content__description"><?php //the_sub_field('beskrivning'); 
-                                                                        ?></p> -->
                     <p class="profil-text-content__description"><?php echo wp_kses_post(get_sub_field('beskrivning')); ?></p>
                 </div>
                 <?php if (get_sub_field('email')) : ?>
