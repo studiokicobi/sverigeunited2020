@@ -366,20 +366,9 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
-// ACF allow unsafe HTML in field
-// Allows breaking change in ACF 6.2.5
-// https://www.advancedcustomfields.com/blog/acf-6-2-5-security-release/
-add_filter('acf/shortcode/allow_unsafe_html', function ($allowed, $atts) {
-    if ($atts['field'] === 'beskrivning') {
-        return true;
-    }
-    return $allowed;
-}, 10, 2);
-
-/* ACF escape HTML
-------------------------------------*/
+// ACF escape HTML
+// Opt in immediately escape HTML ACF 
 add_filter('acf/the_field/escape_html_optin', '__return_true');
-
 
 /* Responsive video embeds
 ------------------------------------*/
