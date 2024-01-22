@@ -370,11 +370,16 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 // Allows breaking change in ACF 6.2.5
 // https://www.advancedcustomfields.com/blog/acf-6-2-5-security-release/
 add_filter('acf/shortcode/allow_unsafe_html', function ($allowed, $atts) {
-    if ($atts['field'] === 'profiler') {
+    if ($atts['field'] === 'beskrivning') {
         return true;
     }
     return $allowed;
 }, 10, 2);
+
+/* ACF escape HTML
+------------------------------------*/
+add_filter('acf/the_field/escape_html_optin', '__return_true');
+
 
 /* Responsive video embeds
 ------------------------------------*/
