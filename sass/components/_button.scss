@@ -41,3 +41,16 @@ a.knapp {
 p.knapp {
   margin-bottom: 3rem;
 }
+
+@media all and (max-width:600px) {
+	a.knapp::after {
+		display: none;
+	}
+	
+	a.knapp {
+	  margin: 0;
+	  padding: 0.15rem 0.3rem;
+	  box-decoration-break: clone;
+  	background-color: $brand;
+	}
+}
