@@ -1727,6 +1727,7 @@ input.search-input:-moz-placeholder {
 }
 .nyheter .nyheter-grid img {
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 .nyheter .nyheter-grid .date {
   margin-bottom: 1rem;
