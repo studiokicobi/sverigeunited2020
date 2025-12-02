@@ -40,7 +40,7 @@ if (!empty($block['align'])) {
             <?php while (have_rows('partners_kort')) : the_row(); ?>
                 <?php if (get_sub_field('logotyp')) : ?>
                     <div>
-                        <img src="<?php the_sub_field('logotyp'); ?>" />
+                        <img src="<?php the_sub_field('logotyp'); ?>" alt="" />
                     </div>
                 <?php endif ?>
             <?php endwhile; ?>
