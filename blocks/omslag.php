@@ -43,12 +43,12 @@ if (!empty($block['align'])) {
 
 			<?php
 			$lank = get_sub_field('lank');
-			$link_target = $lank['target'] ? $lank['target'] : '_self';
 			?>
 
 			<div class="omslag" style="background-image: url('<?php the_sub_field('bakgrundsbild'); ?>');">
 
 				<?php if ($lank) : ?>
+					<?php $link_target = $lank['target'] ? $lank['target'] : '_self'; ?>
 					<a class="omslag__img-link" href="<?php echo esc_url($lank['url']); ?>" target="<?php echo esc_attr($link_target); ?>">
 
 						<div class="omslag-content">
