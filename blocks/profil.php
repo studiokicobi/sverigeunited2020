@@ -49,7 +49,7 @@ if (!empty($block['align'])) {
                 </div>
                 <?php if (get_sub_field('email')) : ?>
                     <div class="profil-email">
-                        <a class="knapp" href="mailto:<?php esc_url(antispambot(the_sub_field('email'))); ?>">Email</a>
+                        <a class="knapp" href="mailto:<?php echo esc_url(antispambot(get_sub_field('email'))); ?>">Email</a>
                     </div>
                 <?php endif ?>
             </div>

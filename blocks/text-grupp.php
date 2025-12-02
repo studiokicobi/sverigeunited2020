@@ -46,10 +46,10 @@ if (!empty($block['align'])) {
                     <?php the_sub_field('brodtext'); ?>
                 </div>
             <?php endwhile; ?>
-        <?php else : ?>
-            <?php // no rows found 
-            ?>
         </div>
+    <?php else : ?>
+        <?php // no rows found
+        ?>
     <?php endif; ?>
 
 </div>

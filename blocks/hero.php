@@ -36,6 +36,7 @@ if (!empty($block['align'])) {
 </style>
 
 <?php
+$kort_class = '';
 if (have_rows('layout')) :
     while (have_rows('layout')) : the_row();
         if (have_rows('ensam_kort')) :
@@ -74,7 +75,7 @@ endif;
                                     <h2 class="ensam-kort__heading"><?php the_sub_field('kort_rubrik'); ?></h2>
                                 <?php endif; ?>
 
-                                <?php $kort_text = get_sub_field('kort_rubrik'); ?>
+                                <?php $kort_text = get_sub_field('kort_text'); ?>
                                 <?php if ($kort_text) : ?>
                                     <p class="ensam-kort__text"><?php the_sub_field('kort_text'); ?></p>
                                 <?php endif; ?>
